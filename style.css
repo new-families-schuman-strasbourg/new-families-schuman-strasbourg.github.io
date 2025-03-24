@@ -6,6 +6,7 @@ body {
     box-sizing: border-box;
     color: #1E1E1E;
     background: #f8f6f4;
+    letter-spacing: -3%;
   }
   
   /* Header */
@@ -85,7 +86,17 @@ body {
     padding: 40px;
     text-align: center;
   }
-  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: start;
+  }
+
+  p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: left;
+  }
   /* Info Cards */
   .info-cards {
     display: flex;
