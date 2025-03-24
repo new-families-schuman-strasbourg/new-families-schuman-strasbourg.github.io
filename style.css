@@ -1,28 +1,53 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #333;
+    color: #1E1E1E;
+    background: #f8f6f4;
   }
   
   /* Header */
   header {
-    background: #f4f4f4;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .upper-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .lower-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
   }
   
   nav a {
     margin-right: 15px;
     text-decoration: none;
-    color: #333;
+    color: #1E1E1E;
+  }
+
+  .language-toggle {
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+  }
+
+  .language {
+    padding: 10px;
   }
   
   /* Hero */
   .hero {
     padding: 40px;
-    background: #ffeded;
     text-align: center;
   }
   
@@ -40,11 +65,11 @@ body {
     border-radius: 8px;
   }
   
-  .card.blue { background: #1e3a8a; }
-  .card.light-blue { background: #3b82f6; }
-  .card.yellow { background: #fbbf24; }
-  .card.orange { background: #f97316; }
-  .card.red { background: #dc2626; }
+  .card.blue { background: #122667; }
+  .card.light-blue { background: #0B5DA7; }
+  .card.yellow { background: #F29F05; }
+  .card.orange { background: #F27405; }
+  .card.red { background: #DA3A2C; }
   
   /* FAQ */
   .faq details {
