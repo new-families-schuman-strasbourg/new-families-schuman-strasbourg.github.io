@@ -1,0 +1,70 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+  }
+  
+  /* Header */
+  header {
+    background: #f4f4f4;
+    padding: 20px;
+  }
+  
+  nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Hero */
+  .hero {
+    padding: 40px;
+    background: #ffeded;
+    text-align: center;
+  }
+  
+  /* Info Cards */
+  .info-cards {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .card {
+    flex: 1;
+    padding: 20px;
+    color: #fff;
+    border-radius: 8px;
+  }
+  
+  .card.blue { background: #1e3a8a; }
+  .card.light-blue { background: #3b82f6; }
+  .card.yellow { background: #fbbf24; }
+  .card.orange { background: #f97316; }
+  .card.red { background: #dc2626; }
+  
+  /* FAQ */
+  .faq details {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  
+  /* Map */
+  .map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+  }
+  
+  /* Footer */
+  footer {
+    background: #1e3a8a;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
