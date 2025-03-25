@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>École Internationale Robert Schuman</title> 
 </head>
 <body>
@@ -110,9 +113,9 @@
         <div class="contact">
             <img class="school_picture" src="./assets/pic_of_school_for_footer.png" alt="Picture of the school">
             <div class="contact-info">
-                <h5>École Élémentaire Internationale Robert-Schuman</h5>
+                <h5>École Élémentaire<br>Internationale Robert-Schuman</h5>
                 <p>Principal: Ms. Celia Masquera</p>
-                <p>Email: <a href="mailto:ce.0672269c@ac-strasbourg.fr">ce.0672269c@ac-strasbourg.fr</a></p>
+                <p>Email: <a href="mailto:ce.0672269c@ac-strasbourg.fr" style="text-decoration: none; color: #1e1e1e;">ce.0672269c@ac-strasbourg.fr</a></p>
                 <p>Phone: 03 88 30 73 65</p>
                 <p>Address: 10, rue Vauban, 67000 Strasbourg</p>
                 <p>Languages taught:<br>
@@ -128,16 +131,70 @@
         </div>
         <div class="links">
             <h5>Quick Links</h5>
-            <a href="#">Visit</a>
-            <a href="#">Apply</a>
-            <a href="#">Contact</a>
-            <a href="#">About FCPE</a>
+            <div class="links-list">
+                <a href="#">Visit</a>
+                <a href="#">Apply</a>
+                <a href="#">Contact</a>
+                <a href="#">About FCPE</a>  
+            </div>
         </div>
     </section>
 
   <footer>
     &copy; This site is made for parents of the Robert Schuman school in Strasbourg by I. Rusiaieva, K. Paroci, and Y. Bulatov | Terms of Use | Privacy Policy | 2025 
   </footer>
+
+  <script>
+    function setElementWidth(element, columnsSpanned, incrementGutter = false) {
+      // Get CSS variables
+      const designWidth = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--design-width'));
+      const columns = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--columns'));
+      const gutter = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gutter'));
+      const margin = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--margin'));
+  
+      // Calculate available width
+      const availableWidth = designWidth - (2 * margin) - ((columns - 1) * gutter);
+      const columnWidth = availableWidth / columns;
+  
+      // Calculate element width based on columns spanned
+      let elementWidth = (columnWidth * columnsSpanned) + ((columnsSpanned - 1) * gutter);
+
+      // Optionally add gutter width if incrementGutter is true
+      if (incrementGutter) {
+        elementWidth += gutter; // Add one more gutter width if incrementGutter is true
+  }
+
+      // Adjust for viewport size using the design width ratio
+      const finalWidth = (elementWidth * window.innerWidth) / designWidth;
+      
+      // Set the element's width dynamically
+      element.style.width = finalWidth + 'px';
+    }
+  
+    // Example: Set the width of elements dynamically
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set the widths for each element dynamically
+      
+      const hero = document.querySelector('.hero');
+      setElementWidth(hero, 4);
+
+      const message = document.querySelector('.message');
+      setElementWidth(message, 5);
+
+      const map = document.querySelector('.map');
+      setElementWidth(map, 6, true);
+
+      const contact = document.querySelector('.contact');
+      setElementWidth(contact, 3);
+  
+      const school = document.querySelector('.school-website');
+      setElementWidth(school, 3); 
+
+      const links = document.querySelector('.links');
+      setElementWidth(links, 1, true); 
+    });
+  </script>
+  
 
 </body>
 </html>
