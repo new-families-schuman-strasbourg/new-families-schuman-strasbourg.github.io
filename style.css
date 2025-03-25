@@ -175,7 +175,9 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: calc(var(--column-width) + 2 * var(--gutter));
+    margin-left: calc(var(--column-width) + 2 * var(--gutter));
+    margin-top: calc(var(--column-width));
+    margin-bottom: calc(var(--column-width));
     margin-right: calc(2*var(--column-width) + 2 * var(--gutter));;
     align-items: stretch;
   }
@@ -243,8 +245,12 @@ body {
   footer {
     background: #010A26;
     color: #FBFBFB;
-    padding: 10px;
-    text-align: center;
+    font-weight: 400;
+    font-size: 0.875rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 62px;
   }
 
   h5 {
