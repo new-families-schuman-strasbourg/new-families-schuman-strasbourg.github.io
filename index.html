@@ -215,6 +215,25 @@
       setElementWidth(links, 1, true); 
 
       // Attach all card button event listeners
+      // Make entire card clickable and keyboard accessible
+      document.querySelectorAll('.card').forEach((card) => {
+        // Click on card (except button) triggers button click
+        card.addEventListener('click', function(e) {
+          if (e.target.tagName === 'BUTTON') return;
+          const btn = card.querySelector('button');
+          if (btn) btn.click();
+        });
+        // Keyboard accessibility: Enter/Space triggers button click
+        card.setAttribute('tabindex', '0');
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const btn = card.querySelector('button');
+            if (btn) btn.click();
+          }
+        });
+      });
+
       document.querySelectorAll('.card button').forEach((btn) => {
         btn.addEventListener('click', () => {
           const targetId = btn.parentElement.getAttribute('data-target');
@@ -234,19 +253,27 @@
           document.querySelectorAll('.card').forEach((card) => {
             card.style.boxShadow = 'none';
           });
-          // Toggle target section
+          // Toggle target section and hide-button class
+          const allCards = document.querySelectorAll('.card');
+          const card = btn.closest('.card');
           if (targetSection.classList.contains('open')) {
             targetSection.classList.remove('open');
             targetSection.style.maxHeight = null;
             targetSection.style.padding = '0';
             targetSection.style.backgroundColor = '';
+            if (card) card.classList.remove('hide-button');
           } else {
             targetSection.classList.add('open');
             targetSection.style.backgroundColor = backgroundColor;
             targetSection.style.maxHeight = targetSection.scrollHeight + 'px';
-            document.querySelectorAll('.card').forEach((card) => {
-              if (!card.contains(btn)) {
-                card.style.boxShadow = '0px 8px 8px rgba(0, 0, 0, 0.4)';
+            allCards.forEach((c) => {
+              c.classList.remove('hide-button');
+              c.style.boxShadow = 'none';
+            });
+            if (card) card.classList.add('hide-button');
+            allCards.forEach((c) => {
+              if (!c.contains(btn)) {
+                c.style.boxShadow = '0px 8px 8px rgba(0, 0, 0, 0.4)';
               }
             });
           }

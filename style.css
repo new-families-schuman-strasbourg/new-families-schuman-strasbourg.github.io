@@ -183,9 +183,55 @@ body {
     cursor: pointer;
     transition: font-size 0.2s ease;
   }
-  .card button:hover{
+  .card button:hover,
+.card:hover button,
+.card:focus-visible button {
     font-size: 1.5rem;
-  }
+    transition: font-size 0.2s ease;
+}
+
+.card:hover,
+.card:focus-visible {
+    box-shadow: 0 0 12px 0 rgba(0,0,0,0.12);
+    transition: box-shadow 0.2s;
+}
+
+.card.expanded {
+    height: 350px;
+    transition: height 0.3s, font-size 0.3s;
+}
+.card.expanded h4 {
+    font-size: 1.5rem;
+    transition: font-size 0.3s;
+}
+.card.hide-button {
+    margin-top: -24px;
+    height: calc(301px + 24px);
+    margin-bottom: 0;
+    z-index: 2;
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.18);
+    position: relative;
+    transition: margin-top 0.25s, margin-bottom 0.25s, box-shadow 0.25s;
+}
+.card.hide-button button {
+    display: none;
+}
+
+.info-cards {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+    gap: 0;
+}
+.card {
+    margin: 0;
+    padding: 40px 8px 8px;
+}
+.expandable-content {
+    margin-top: 0;
+    padding-top: 0;
+}
 
   .expandable-section {
     max-height: 0;
