@@ -78,7 +78,7 @@
   <!-- Expandable content section -->
    <section class="expandable-content">
    
-    <div id="info-system" class="expandable-section">
+    <div id="info-system" class="expandable-section" >
         <h2>School year <span>2024/2025</span></h2>
         <ul>
             <li><strong>Class schedule:</strong> Mondays, Tuesdays, Thursdays, Fridays 8:30 a.m. – 12:00 p.m. and 2:00 p.m. – 4:30 p.m.</li>
@@ -201,67 +201,62 @@
     // Example: Set the width of elements dynamically
     document.addEventListener('DOMContentLoaded', function() {
       // Set the widths for each element dynamically
-      
       const hero = document.querySelector('.hero');
       setElementWidth(hero, 4);
-
       const message = document.querySelector('.message');
       setElementWidth(message, 5);
-
       const map = document.querySelector('.map');
       setElementWidth(map, 6, true);
-
       const contact = document.querySelector('.contact');
       setElementWidth(contact, 3);
-  
       const school = document.querySelector('.school-website');
       setElementWidth(school, 3); 
-
       const links = document.querySelector('.links');
       setElementWidth(links, 1, true); 
-    });
 
-    document.querySelectorAll('.card button').forEach((btn) => {
+      // Attach all card button event listeners
+      document.querySelectorAll('.card button').forEach((btn) => {
         btn.addEventListener('click', () => {
-            const targetId = btn.parentElement.getAttribute('data-target');
-            const targetSection = document.getElementById(targetId);
-            
-            // Get computed background color from parent
-            const backgroundColor = window.getComputedStyle(btn.parentElement).backgroundColor;
-        
-            // Close other sections
-            document.querySelectorAll('.expandable-section').forEach((section) => {
-              if (section !== targetSection) {
-                section.classList.remove('open');
-                section.style.maxHeight = null;
-                section.style.padding = '0';
-                section.style.backgroundColor = '';
-              }
-            });
-
-            // Remove shadow from all cards
-            document.querySelectorAll('.card').forEach((card) => {
-                card.style.boxShadow = 'none';
-            });
-        
-            // Toggle target section
-            if (targetSection.classList.contains('open')) {
-              targetSection.classList.remove('open');
-              targetSection.style.maxHeight = null;
-              targetSection.style.padding = '0';
-              targetSection.style.backgroundColor = '';
-            } else {
-              targetSection.classList.add('open');
-              targetSection.style.backgroundColor = backgroundColor;
-              targetSection.style.maxHeight = targetSection.scrollHeight + 'px';
-              document.querySelectorAll('.card').forEach((card) => {
-                if (!card.contains(btn)) {
-                    card.style.boxShadow = '0px 8px 8px rgba(0, 0, 0, 0.4)';
-                }
-            });
+          const targetId = btn.parentElement.getAttribute('data-target');
+          const targetSection = document.getElementById(targetId);
+          // Get computed background color from parent
+          const backgroundColor = window.getComputedStyle(btn.parentElement).backgroundColor;
+          // Close other sections
+          document.querySelectorAll('.expandable-section').forEach((section) => {
+            if (section !== targetSection) {
+              section.classList.remove('open');
+              section.style.maxHeight = null;
+              section.style.padding = '0';
+              section.style.backgroundColor = '';
             }
           });
+          // Remove shadow from all cards
+          document.querySelectorAll('.card').forEach((card) => {
+            card.style.boxShadow = 'none';
+          });
+          // Toggle target section
+          if (targetSection.classList.contains('open')) {
+            targetSection.classList.remove('open');
+            targetSection.style.maxHeight = null;
+            targetSection.style.padding = '0';
+            targetSection.style.backgroundColor = '';
+          } else {
+            targetSection.classList.add('open');
+            targetSection.style.backgroundColor = backgroundColor;
+            targetSection.style.maxHeight = targetSection.scrollHeight + 'px';
+            document.querySelectorAll('.card').forEach((card) => {
+              if (!card.contains(btn)) {
+                card.style.boxShadow = '0px 8px 8px rgba(0, 0, 0, 0.4)';
+              }
+            });
+          }
+        });
       });
+
+      // Simulate click on the first Read More button after all listeners
+      const firstReadMore = document.querySelector('.card button');
+      if (firstReadMore) firstReadMore.click();
+    });
   </script>
   
 

@@ -125,7 +125,6 @@ body {
     justify-content: space-between;
     padding: 40px 8px 8px;
     gap: 24px;
-
     width: 272px;
     height: 301px;
   }
@@ -174,7 +173,6 @@ body {
 
   .card button {
     padding: 0px;
-
     line-height: 120%;
     letter-spacing: 10%;
     color: #ffffff;
@@ -184,10 +182,8 @@ body {
     border: none;
     cursor: pointer;
     transition: font-size 0.2s ease;
-
   }
-
-  .card button:hover {
+  .card button:hover{
     font-size: 1.5rem;
   }
 
