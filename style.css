@@ -330,6 +330,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    min-width: 1056px;
 }
 .expandable-section.open {
     display: block;
@@ -346,7 +347,7 @@ body {
 /* Section header & subtitle */
 .section-header {
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 0.5em;
     margin-top: 0;
 }
@@ -361,40 +362,45 @@ body {
 .quick-links {
     background: #fff;
     color: #222;
-    padding: 34px 34px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-    margin: 0 0 2em 0;
-    max-width: 286px;
+
+    max-width: 218px;
     align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 34px 34px 34px 34px;
 }
 
 .expandable-main-row {
     display: flex;
     align-items: flex-start;
-    gap: 3em;
+    gap: 50px;
     flex-wrap: wrap;
 }
 
 .section-subtitle {
     margin-bottom: 1.5em;
+    font-size: 1.75rem;
 }
 .quick-links-title {
     font-size: 1rem;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 0;
     margin-bottom: 1em;
+    line-height: 130%;
 }
 .quick-link {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5em 0;
-    color: #1857a4;
+    color: #1e1e1e;
     text-decoration: none;
-    font-weight: 500;
-    border-bottom: 1px solid #eee;
+    font-size: 1.125rem;
+    font-weight: 300;
     transition: color 0.15s;
+    line-height: 130%;
+    letter-spacing: 0;
+    justify-content: space-between;
 }
+
 .quick-link:last-child { border-bottom: none; }
 .quick-link:hover { color: #e94b3c; }
 .quick-link-arrow {
@@ -463,21 +469,23 @@ body {
 }
 
 /* List styling in content blocks */
-.section-content ul {
-    margin: 1em 0 1em 1.5em;
-    padding: 0;
+.expandable-main-row ul {
+    padding-left: 16px;
+    line-height: 150%;
+    list-style-type: disc;
+    list-style-position: outside;
 }
-.section-content ul li {
+.expandable-main-row ul li::marker {
+    font-size: 0.7em;
+}
+
+.expandable-main-row ul li {
     margin-bottom: 0.5em;
-    font-size: 1.05rem;
+    font-size: 1.25rem;
+    line-height: 150%;
 }
-.section-content b {
-    font-weight: bold;
-}
-.section-content em, .section-content a {
-    font-style: italic;
-    color: #fff;
-    text-decoration: underline;
+.expandable-main-row b {
+    font-weight: 600;
 }
 
 /* Responsive adjustments */
@@ -499,7 +507,6 @@ body {
   
   .expandable-section.open {
     opacity: 1;
-    padding: 20px;
   }
 
 
