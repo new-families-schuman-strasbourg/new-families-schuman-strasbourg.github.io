@@ -542,11 +542,62 @@ body {
     justify-content: space-between;
     margin-left: calc(var(--column-width) + 2 * var(--gutter));
     margin-top: calc(var(--column-width));
-    margin-bottom: calc(var(--column-width));
+
     margin-right: calc(2*var(--column-width) + 2 * var(--gutter));;
     align-items: stretch;
     gap: calc(var(--column-width) + 2 * var(--gutter));
   }
+
+#to-top-btn {
+    align-self: flex-end;
+    margin: 16px 0 0 auto;
+    width: 64px;
+    height: 64px;
+    background: #fff;
+    color: #222;
+    border: 1.5px solid #d3d3d3;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s, background 0.2s, color 0.2s, box-shadow 0.2s;
+    padding: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+#to-top-btn:focus, #to-top-btn:hover {
+    border-color: #aaa;
+    background: #f6f6f6;
+    color: #111;
+    outline: none;
+}
+#to-top-btn .to-top-arrow {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    color: #222;
+    line-height: 1;
+}
+#to-top-btn .to-top-text {
+    font-size: 0.95em;
+    color: #222;
+    margin-top: 2px;
+    letter-spacing: 0.01em;
+}
+@media (max-width: 900px) {
+    #to-top-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 0.95rem;
+    }
+    #to-top-btn .to-top-arrow {
+        font-size: 1.1em;
+    }
+    #to-top-btn .to-top-text {
+        font-size: 0.8em;
+    }
+}
 
   .contact {
     display: flex;

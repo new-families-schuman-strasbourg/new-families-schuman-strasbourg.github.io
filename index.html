@@ -489,8 +489,12 @@
                 <a href="#">About FCPE</a>  
             </div>
         </div>
+    
     </section>
-
+    <button id="to-top-btn" aria-label="Scroll to top">
+      <span class="to-top-arrow">↑</span>
+      <span class="to-top-text">To top</span>
+    </button>
   <footer>
     &copy; This site is made for parents of the Robert Schuman school in Strasbourg by I. Rusiaieva, K. Paroci, and Y. Bulatov | Terms of Use | Privacy Policy | 2025 
   </footer>
@@ -551,6 +555,17 @@
       });
       // Set the widths for each element dynamically
       const hero = document.querySelector('.hero');
+
+      // To Top button functionality
+      const toTopBtn = document.getElementById('to-top-btn');
+      if (toTopBtn) {
+        toTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Remove focus/active states after click
+        toTopBtn.blur();
+        });
+      }
+
       setElementWidth(hero, 4);
       const message = document.querySelector('.message');
       setElementWidth(message, 5);
