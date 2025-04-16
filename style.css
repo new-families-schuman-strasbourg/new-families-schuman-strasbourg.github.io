@@ -96,6 +96,11 @@ body {
     line-height: 120%;
   }
 
+  .school-name:hover {
+    font-weight: 300;
+    transition: font-weight 0.3s ease;
+  }
+
 
 
   .language-toggle {
@@ -315,7 +320,16 @@ body {
     padding: 0;
     box-sizing: border-box;
     opacity: 1;
-    transition: none;
+}
+
+.expandable-section-content {
+    margin-left: calc(var(--column-width) + 2 * var(--gutter));
+    margin-top: calc(var(--column-width));
+    margin-bottom: calc(var(--column-width));
+    margin-right: calc(2*var(--column-width) + 2 * var(--gutter));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .expandable-section.open {
     display: block;
@@ -347,12 +361,22 @@ body {
 .quick-links {
     background: #fff;
     color: #222;
-    border-radius: 6px;
-    padding: 1.5em 2em;
+    padding: 34px 34px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-    margin: 1em 0 2em 0;
-    min-width: 260px;
-    max-width: 320px;
+    margin: 0 0 2em 0;
+    max-width: 286px;
+    align-self: flex-start;
+}
+
+.expandable-main-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 3em;
+    flex-wrap: wrap;
+}
+
+.section-subtitle {
+    margin-bottom: 1.5em;
 }
 .quick-links-title {
     font-size: 1rem;
@@ -392,8 +416,15 @@ body {
     box-shadow: 0 1px 4px rgba(0,0,0,0.08);
     border: none;
     overflow: hidden;
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, background 0.15s, color 0.15s;
+    max-width: 912px;
 }
+.faq-question:hover {
+    background: #979797;
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+}
+
 .faq-question {
     font-weight: 500;
     font-size: 1.1rem;
@@ -547,7 +578,6 @@ body {
   }
 
 .logos img {
-    height: 48px;
     width: auto;
     max-width: 120px;
     object-fit: contain;
@@ -574,12 +604,20 @@ body {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .school-website:hover {
+    background-color: #f8f6f4;
+    color: #f27405;
+    transition: background-color 0.3s, color 0.3s;
   }
 
   .links {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-width: 112px;
   }
 
   .links a {
