@@ -231,23 +231,19 @@
       </ul>
     </div>
     <div id="health" class="expandable-section">
-      <div style="display:flex;gap:3em;align-items:flex-start;flex-wrap:wrap;">
-        <div style="flex:2;min-width:0;">
-          <h2 class="section-header">Health and safety: child’s wellbeing</h2>
-          <h3 class="section-subtitle">Elementary school schedule</h3>
-          <ul>
-            <li><b>Class schedule:</b> Mondays, Tuesdays, Thursdays, Fridays 8:30 a.m. – 12:00 p.m. and 2:00 p.m. – 4:30 p.m.</li>
-            <li><b>Reception:</b> 8:20 a.m. in the morning, 1:50 p.m. in the afternoon.</li>
-            <li><b>Canteen:</b> 12:00 – 2:00 p.m.</li>
-          </ul>
-        </div>
-        <aside class="quick-links">
-          <div class="quick-links-title">QUICK LINKS</div>
-          <a href="#" class="quick-link">School calendar 2024-2025 <span class="quick-link-arrow">&rarr;</span></a>
-          <a href="#" class="quick-link">School canteen services <span class="quick-link-arrow">&rarr;</span></a>
-          <a href="#" class="quick-link">After-school care <span class="quick-link-arrow">&rarr;</span></a>
-        </aside>
-      </div>
+      <h2 class="section-header">Health and safety: child’s wellbeing</h2>
+      <h3 class="section-subtitle">Elementary school schedule</h3>
+      <ul>
+        <li><b>Class schedule:</b> Mondays, Tuesdays, Thursdays, Fridays 8:30 a.m. – 12:00 p.m. and 2:00 p.m. – 4:30 p.m.</li>
+        <li><b>Reception:</b> 8:20 a.m. in the morning, 1:50 p.m. in the afternoon.</li>
+        <li><b>Canteen:</b> 12:00 – 2:00 p.m.</li>
+      </ul>
+      <aside class="quick-links">
+        <div class="quick-links-title">QUICK LINKS</div>
+        <a href="#" class="quick-link">School calendar 2024-2025 <span class="quick-link-arrow">&rarr;</span></a>
+        <a href="#" class="quick-link">School canteen services <span class="quick-link-arrow">&rarr;</span></a>
+        <a href="#" class="quick-link">After-school care <span class="quick-link-arrow">&rarr;</span></a>
+      </aside>
       <ul class="faq-list">
         <li class="faq-item">
           <button class="faq-question">1. What happens if my child gets sick or injured at school ? <span class="faq-arrow">&#8594;</span></button>
@@ -408,16 +404,23 @@
             targetSection.style.maxHeight = null;
             targetSection.style.padding = '0';
             targetSection.style.backgroundColor = '';
-            if (card) card.classList.remove('hide-button');
+            if (card) {
+              card.classList.remove('hide-button');
+              card.classList.remove('expanded');
+            }
           } else {
             targetSection.classList.add('open');
             targetSection.style.backgroundColor = backgroundColor;
             targetSection.style.maxHeight = targetSection.scrollHeight + 'px';
             allCards.forEach((c) => {
               c.classList.remove('hide-button');
+              c.classList.remove('expanded');
               c.style.boxShadow = 'none';
             });
-            if (card) card.classList.add('hide-button');
+            if (card) {
+              card.classList.add('hide-button');
+              card.classList.add('expanded');
+            }
             allCards.forEach((c) => {
               if (!c.contains(btn)) {
                 c.style.boxShadow = '0px 8px 8px rgba(0, 0, 0, 0.4)';
