@@ -7,7 +7,35 @@
   }  
 
 /* Global Styles */
+
+@media (min-width: 1441px) {
+  body {
+    background: #f8f6f4;
+  }
+  .main-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    background: #f8f6f4;
+  }
+  .main-content {
+    width: 1440px;
+    max-width: 1440px;
+    min-width: 0;
+    box-shadow: 0 0 24px 0 rgba(0,0,0,0.04);
+    background: #f8f6f4;
+  }
+  .expandable-content {
+    max-width: 1440px;
+  }
+  header, .upper-header, .lower-header {
+    max-width: 1440px;
+  }
+}
+
 body {
+  
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
@@ -486,6 +514,7 @@ body {
     margin-bottom: calc(var(--column-width));
     margin-right: calc(2*var(--column-width) + 2 * var(--gutter));;
     align-items: stretch;
+    gap: calc(var(--column-width) + 2 * var(--gutter));
   }
 
   .contact {
@@ -504,14 +533,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    gap: 2.22vw;
+    gap: 36px;
+    align-items: center;
+    max-width: 319px;
   }
 
   .logos{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 32px;
+  }
+
+.logos img {
+    height: 48px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
   }
 
 
@@ -524,7 +563,17 @@ body {
     font-weight: 500;
     font-size: 1.125rem;
     text-align: center;
-    height: 4vw;
+    height: 58px;
+    width: 319px !important;
+    box-sizing: border-box;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   .links {
