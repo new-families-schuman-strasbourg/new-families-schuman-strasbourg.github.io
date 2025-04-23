@@ -13,19 +13,25 @@
     background: #f8f6f4;
   }
   .main-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    min-height: 100vh;
-    background: #f8f6f4;
-  }
+  display: block;
+  width: 1440px;
+  max-width: 100%;
+  min-height: 100vh;
+  background: #f8f6f4;
+  margin-left: auto;
+  margin-right: auto;
+}
+
   .main-content {
-    width: 1440px;
-    max-width: 1440px;
-    min-width: 0;
-    box-shadow: 0 0 24px 0 rgba(0,0,0,0.04);
-    background: #f8f6f4;
-  }
+  width: 100%;
+  max-width: 1440px;
+  min-width: 0;
+  box-shadow: 0 0 24px 0 rgba(0,0,0,0.04);
+  background: #f8f6f4;
+  margin-left: auto;
+  margin-right: auto;
+}
+
   .expandable-content {
     max-width: 1440px;
   }
