@@ -15,17 +15,29 @@
     <!-- Header Section -->
   <header>
     <div class="upper-header">
-        <nav>
-        <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank">Visit</a>
-        <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/notre-ecole/admission/" target="_blank">Apply</a>
-        <a href="#https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/">Contact</a> 
-        </nav>
-        <p class="school-name"><a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/" target="_blank" style="text-decoration: none; color: #1e1e1e;">École Internationale Robert Schuman</a></p>
-        <div class="language-toggle">
-            <button class="language" id="en">EN</button>
-            <button class="language" id="fr">FR</button>
-        </div>
+  <p class="school-name"><a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/" target="_blank" style="text-decoration: none; color: #1e1e1e;">École Internationale Robert Schuman</a></p>
+  <nav>
+    <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank">Visit</a>
+    <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/notre-ecole/admission/" target="_blank">Apply</a>
+    <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank">Contact</a>
+  </nav>
+ 
+    <button class="burger-menu" aria-label="Open navigation menu" style="display: none;">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+    <div class="mobile-nav" style="display: none;">
+      <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank">Visit</a>
+      <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/notre-ecole/admission/" target="_blank">Apply</a>
+      <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank">Contact</a>
     </div>
+    <div class="language-toggle">
+      <button class="language active" id="en">EN</button>
+      <button class="language" id="fr">FR</button>
+    </div>
+</div>
+
     <div class="lower-header">
         <div class="hero">
             <h1>Welcome, <br>New Families!</h1>
@@ -550,18 +562,19 @@
         toTopBtn.blur();
         });
       }
-
-      setElementWidth(hero, 4);
-      const message = document.querySelector('.message');
-      setElementWidth(message, 5);
-      const map = document.querySelector('.map');
-      setElementWidth(map, 6, true);
-      const contact = document.querySelector('.contact');
-      setElementWidth(contact, 3);
-      const school = document.querySelector('.school-website');
-      setElementWidth(school, 3); 
-      const links = document.querySelector('.links');
-      setElementWidth(links, 1, true); 
+      if (window.innerWidth > 900) {
+        setElementWidth(hero, 4);
+        const message = document.querySelector('.message');
+        setElementWidth(message, 5);
+        const map = document.querySelector('.map');
+        setElementWidth(map, 6, true);
+        const contact = document.querySelector('.contact');
+        setElementWidth(contact, 3);
+        const school = document.querySelector('.school-website');
+        setElementWidth(school, 3); 
+        const links = document.querySelector('.links');
+        setElementWidth(links, 1, true);
+      } 
 
       // Attach all card button event listeners
       // Make entire card clickable and keyboard accessible
@@ -643,5 +656,49 @@
   </script>
 
 
+
+<script>
+// Burger menu toggle for mobile only
+function handleBurgerMenuDisplay() {
+  const burger = document.querySelector('.burger-menu');
+  const nav = document.querySelector('nav');
+  const mobileNav = document.querySelector('.mobile-nav');
+  if (window.innerWidth <= 900) {
+    burger.style.display = 'flex';
+    nav.style.display = 'none';
+  } else {
+    burger.style.display = 'none';
+    nav.style.display = '';
+    mobileNav.style.display = 'none';
+  }
+}
+window.addEventListener('resize', handleBurgerMenuDisplay);
+document.addEventListener('DOMContentLoaded', function() {
+  handleBurgerMenuDisplay();
+  const burger = document.querySelector('.burger-menu');
+  const mobileNav = document.querySelector('.mobile-nav');
+  burger.addEventListener('click', function() {
+    if (mobileNav.style.display === 'block') {
+      mobileNav.style.display = 'none';
+    } else {
+      mobileNav.style.display = 'block';
+    }
+  });
+  // Language toggle: Only show EN on mobile
+  function handleLanguageToggle() {
+    const enBtn = document.getElementById('en');
+    const frBtn = document.getElementById('fr');
+    if (window.innerWidth <= 900) {
+      enBtn.classList.add('active');
+      frBtn.style.display = 'none';
+    } else {
+      enBtn.classList.remove('active');
+      frBtn.style.display = '';
+    }
+  }
+  handleLanguageToggle();
+  window.addEventListener('resize', handleLanguageToggle);
+});
+</script>
 </body>
 </html>
