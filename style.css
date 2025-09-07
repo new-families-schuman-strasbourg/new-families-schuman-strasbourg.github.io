@@ -390,7 +390,6 @@ body {
 
 .expandable-section {
     display: none;
-    height: auto;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -405,7 +404,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-width: 1056px;
 }
 .expandable-section.open {
     display: block;
@@ -421,10 +419,13 @@ body {
 
 /* Section header & subtitle */
 .section-header {
-    font-size: 2.5rem;
+    font-size: 50px;
     font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.03em;
     margin-bottom: 0.5em;
     margin-top: 0;
+    width: 672px;
 }
 .section-subtitle {
     font-size: 1.25rem;
@@ -492,7 +493,6 @@ body {
 .faq-item {
     background: #fff;
     color: #222;
-    border-radius: 4px;
     margin-bottom: 1em;
     box-shadow: 0 1px 4px rgba(0,0,0,0.08);
     border: none;
@@ -508,8 +508,8 @@ body {
 
 .faq-question {
     font-weight: 500;
-    font-size: 1.1rem;
-    padding: 1em 1.5em;
+    font-size: 24px;
+    padding: 12px 24px;
     cursor: pointer;
     background: #fff;
     border: none;
@@ -523,14 +523,12 @@ body {
     transition: transform 0.2s;
 }
 .faq-item.open .faq-arrow {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
 }
 .faq-answer {
   background: #fff;
-  border-radius: 8px;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
-  margin-top: 16px;
-  padding: 32px 36px 24px 36px;
+  padding: 0px 36px 24px 36px;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -539,7 +537,7 @@ body {
 .faq-item.open .faq-answer {
   max-height: 2000px;
   opacity: 1;
-  padding: 32px 36px 24px 36px;
+  padding: 0px 36px 24px 36px;
   transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.3s, padding 0.3s;
 }
 
@@ -563,9 +561,26 @@ body {
     font-weight: 600;
 }
 
+/* Info list styling (same as .expandable-main-row ul) */
+.info-ul {
+    padding-left: 16px;
+    line-height: 150%;
+    list-style-type: disc;
+    list-style-position: outside;
+}
+.info-ul li::marker {
+    font-size: 0.7em;
+}
+.info-ul li {
+    margin-bottom: 0.5em;
+    font-size: 1.25rem;
+    line-height: 150%;
+}
+.info-ul b {
+    font-weight: 600;
+}
 
   .expandable-section {
-    max-height: 1476px;
     overflow: auto;
     opacity: 0;
     padding: 0;
