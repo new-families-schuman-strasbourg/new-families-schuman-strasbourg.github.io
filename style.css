@@ -3,6 +3,11 @@
     --columns: 12;
     --margin: 32px;
     --gutter: 32px;
+    --mobile-desgn-width: 375px;
+    --mobile-columns:2;
+    --mobile-margin: 16px;
+    --mobile-gutter: 16px;
+    --mobile-column-width: calc((var(--mobile-desgn-width) - (var(--mobile-columns) - 1) * var(--mobile-gutter)) / var(--mobile-columns));
     --column-width: calc((var(--design-width) - (var(--columns) - 1) * var(--gutter)) / var(--columns));
   }  
 
@@ -14,10 +19,14 @@
   body {
     background: #f8f6f4;
   }
+  /* Desktop header logo/text visibility */
+  .school-name { display: block; }
+  .school-logo-link { display: none; }
+  .school-logo { height: 32px; }
   .main-wrapper {
   max-width: 100%;
   min-height: 100vh;
-  background: #f8f6f4;
+  background: #fbfbfb;
   margin-left: auto;
   margin-right: auto;
 }
@@ -54,6 +63,10 @@ body {
 
   strong {
     font-weight: 600;
+  }
+
+  .mobile-break {
+    display: none;
   }
   
   /* Header */
@@ -95,7 +108,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
   }
 
   .lower-header {
@@ -122,30 +135,75 @@ body {
   .burger-menu span {
     display: block;
     width: 28px;
-    height: 3px;
+    height: 2px;
     background: #1E1E1E;
     border-radius: 2px;
   }
   .mobile-nav {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 56px;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100vw;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    z-index: 1000;
-    padding: 1em 0;
-    text-align: left;
-  }
-  .mobile-nav a {
+    height: 100vh;
+    background: #ffffff;
+    z-index: 2000;
+    padding: 0px 16px 200px 16px; /* extra top padding for logo & close */
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center; 
+    text-align: center;
+    justify-content: center;
+}
+.mobile-nav a {
     color: #1E1E1E;
     text-decoration: none;
-    padding: 1em 1.5em;
-    font-size: 1.15em;
-    border-bottom: 1px solid #eee;
-  }
+    padding: 16px 28px;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: none;
+}
+
+/* Mobile nav close button */
+.mobile-nav-close {
+    position: absolute;
+    top: 64px;
+    left: 283px;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mobile-nav-close img {
+    width: 46px;
+    height: 46px;
+    display: block;
+}
+
+/* Mobile nav logo in top-left */
+.mobile-logo-link {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.mobile-logo {
+    height: 28px;
+    width: auto;
+    display: block;
+}
   @media (max-width: 900px) {
     .burger-menu { display: flex; }
     .mobile-nav { display: none; }
@@ -176,6 +234,16 @@ body {
     font-weight: 200;
     font-size: 1.25rem;
     line-height: 120%;
+  }
+  /* Hidden by default; shown on mobile */
+  .school-logo-link {
+    display: none;
+    text-decoration: none;
+  }
+  .school-logo {
+    display: block;
+    height: 32px;
+    width: auto;
   }
 
   .school-name:hover {
@@ -444,9 +512,24 @@ body {
 }
 
 .section-subtitle {
-    margin-bottom: 1.5em;
-    font-size: 1.75rem;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #FBFBFB;
+    max-width: 672px;
 }
+
+.exp-col {
+    flex: 2;
+    min-width: 0;
+    max-width: 672px;
+}
+
+.mobile-only {
+    display: none;
+}
+
 .quick-links-title {
     font-size: 1rem;
     font-weight: bold;
@@ -508,6 +591,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.faq-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1 1 auto;
 }
 .faq-arrow {
     transition: transform 0.2s;
@@ -621,11 +710,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: stretch;
     margin-left: calc(var(--column-width) + 2 * var(--gutter));
     margin-top: calc(var(--column-width));
-
     margin-right: calc(2*var(--column-width) + 2 * var(--gutter));;
-    align-items: stretch;
     gap: calc(var(--column-width) + 2 * var(--gutter));
   }
 
@@ -722,6 +810,7 @@ body {
     border-radius: 4px;
     border: 1px solid #f27405;
     color:#f8f6f4;
+    text-decoration: none;
     font-weight: 500;
     font-size: 1.125rem;
     text-align: center;
@@ -776,6 +865,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 62px;
+    line-height: 150%;
   }
 
   h5 {
@@ -792,12 +882,17 @@ body {
     padding: 0;
     font-family: "Poppins", sans-serif;
   }
+
+  .mobile-break {
+    display: block;
+    height: 0;
+  }
   .main-wrapper {
     display: block;
     width: 375px;
     max-width: 100vw;
     min-width: 0;
-    background: #f8f6f4;
+    background: #fbfbfb;
     margin: 0 auto;
     overflow-x: hidden;
   }
@@ -808,6 +903,12 @@ body {
     background: #f8f6f4;
     margin: 0 auto;
   }
+
+  p{
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+  }
   .expandable-content {
     max-width: 375px;
   }
@@ -817,27 +918,19 @@ body {
   }
   .upper-header {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
   padding: 0;
   width: 100%;
   position: relative;
+  margin-left: var(--mobile-gutter);
 }
 .school-name {
-  width: 100%;
+  width: 126px;
   text-align: left;
   font-size: 1.05rem;
   font-weight: 700;
-  color: #1E1E1E;
-  padding: 18px 16px 6px 16px;
-  background: none;
-  margin: 0;
-  line-height: 1.2;
-  white-space: normal;
-  overflow: visible;
-  text-overflow: unset;
-  z-index: 2;
 }
 .upper-header-controls {
   display: flex;
@@ -845,22 +938,20 @@ body {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  gap: 0.5em;
-  margin-top: 2px;
-  margin-bottom: 2px;
 }
 .burger-menu {
   display: flex !important;
   align-items: center;
-  margin: 0 8px 0 0;
-  z-index: 2;
 }
 .language-toggle {
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-self: stretch;
   margin: 0 10px 0 0;
-  z-index: 2;
+  width: 58px;
+  background-color: #f27405;
+  opacity: 100%;
 }
 .language-toggle button {
   display: none;
@@ -894,19 +985,26 @@ body {
     align-items: center;
     z-index: 2;
   }
-  .language-toggle {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 10px 10px 0 0;
-    z-index: 2;
-  }
+  .burger-menu p{
+    font-size: 12px;
+    font-weight: 400;
+    }
+
   .language-toggle button {
     display: none;
+  }
+
+  #en{
+    background-color: #f27405;
+    color: #fff;
+    font-size: 16px;
+    font-weight:500;
+    opacity: 100%;
   }
   .language-toggle .language.active {
     display: flex;
     flex-direction: column;
+    align-self: center;
     font-size: 1em;
     margin-left: auto;
     padding: 0.4em 1em;
@@ -927,11 +1025,195 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0 0.5em;
+    padding: 0 0;
     margin-top: 1.5em;
     width: 100%;
   }
   .hero {
+    width: 335px;
+    margin-left: var(--mobile-gutter);
+    margin-right: var(--mobile-gutter);
+  }
+
+  /* Hide text school name on mobile */
+  .school-name {
+    display: none;
+  }
+
+  /* Show image logo on mobile */
+  .school-logo-link {
+    display: flex;
+    align-items: center;
+    align-self: center;
+  }
+  .school-logo {
+    height: 28px;
     width: auto;
+    display: block;
+  }
+
+  /* Ensure burger menu shows lines + label */
+  .burger-menu {
+    height: auto;
+    padding: 6px 8px;
+    gap: 4px;
+  }
+  .burger-menu p {
+    margin: 0;
+  }
+
+  .info-cards{
+    flex-direction: column;
+  }
+  .card{
+    width: 100%;
+    padding: 40px 0;
+  }
+
+  .expandable-section-content{
+    margin-left: var(--mobile-gutter);
+    margin-right: var(--mobile-gutter);
+    margin-top: var(--mobile-margin);
+    margin-bottom: var(--mobile-margin);
+    align-items: center;
+    gap: 20px;
+  }
+
+  .expandable-main-row{
+    flex-direction: column;
+  }
+
+  .only-desktop{
+    display: none;
+  }
+
+  .mobile-only{
+    display: block;
+  }
+
+  .exp-col{
+    max-width: 335px;
+  }
+  .exp-col p{
+    font-size: 18px;
+  }
+
+  .section-subtitle{
+    max-width: 335px;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 600;
+    margin: 20px 0;
+  }
+
+  .quick-links{
+    align-self: center;
+    max-width: 267px;
+  }
+
+  .section-header{
+    font-size: 26px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .faq-question{
+    font-size: 20px;
+    height: 120px;
+    align-items: center;
+  }
+  .faq-item{
+    margin-bottom: 20px;
+    max-width: 335px;
+  }
+  .faq-left{
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+  }
+  .faq-text{
+    flex: 1;
+    align-self: center;
+  }
+
+  .faq-arrow{
+    align-self: center;
+  }
+  .faq-item.open .faq-answer{
+    padding: 0px 15px 24px 15px;
+  }
+
+  .faq-answer p{
+    font-size: 18px;
+  }
+
+  .info-ul li{
+    font-size: 18px;
+  }
+    
+  
+
+  
+  .message-map{
+    margin:0;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .message-map h3{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: -3%;
+    text-align:left;
+    align-self: center;
+    padding: 40px 45px;
+    width: 285px;
+    margin: 0;
+    z-index: 2;
+    background-color: #ffffff;
+  }
+
+  .map{
+    order:1;
+    z-index: 1;
+    height: 644px;
+  }
+
+  .message{
+    order:2;
+    position: relative;
+    bottom: 250px
+  }
+
+  .message p{
+    margin-top: 80px;
+    margin-left: var(--mobile-gutter);
+    margin-right: var(--mobile-gutter);
+  }
+  .upper-footer{
+    flex-direction: column;
+    align-items: flex-start;
+    margin: var(--mobile-margin);
+    margin-top: -220px;
+    gap: 30px;
+    position: relative;
+    z-index: 3;
+    background: #fbfbfb;
+  }
+  .logos-school-website{
+    flex-direction: column-reverse;
+    gap:30px;
+  }
+
+  .school-website{
+    width: 335px !important;
+  }
+
+
+  footer{
+    font-size: 12px;
+    padding: 20px;
+    text-align: center;
   }
 }
