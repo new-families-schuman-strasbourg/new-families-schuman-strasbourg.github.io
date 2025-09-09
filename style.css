@@ -139,6 +139,10 @@ body {
     background: #1E1E1E;
     border-radius: 2px;
   }
+
+  .burger-menu p {
+    color: #1E1E1E;
+  }
   .mobile-nav {
     display: none;
     position: fixed;
@@ -619,6 +623,7 @@ body {
     align-items: center;
     gap: 8px;
     flex: 1 1 auto;
+    color: #1E1E1E;
 }
 .faq-arrow {
     transition: transform 0.2s;
