@@ -263,6 +263,7 @@ body {
     padding: 10px;
     font-size: 1.25rem;
     font-weight: 500;
+    cursor: pointer;
   }
 
   #en{
@@ -278,6 +279,18 @@ body {
     border: 1px solid #f27405;
     color:#f8f6f4;
   } 
+
+  /* Invert language button colors on French pages (global) */
+  html[lang='fr'] #en{
+    background-color: #f27405;
+    color: #fff;
+    border: 1px solid #f27405;
+  }
+  html[lang='fr'] #fr{
+    background-color: #f8f6f4;
+    color: #f27405;
+    border: 1px solid #f27405;
+  }
 
   /* Hero */
   .hero {
@@ -547,13 +560,22 @@ body {
     line-height: 130%;
     letter-spacing: 0;
     justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 .quick-link:last-child { border-bottom: none; }
-.quick-link:hover { color: #e94b3c; }
 .quick-link-arrow {
-    font-size: 1.1em;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
     margin-left: 0.5em;
+    background: url('./assets/arrow-right.svg') no-repeat center / contain;
+    /* hide any unicode arrow character */
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
 }
 
 /* FAQ Accordion */
@@ -600,9 +622,16 @@ body {
 }
 .faq-arrow {
     transition: transform 0.2s;
+    display: inline-block;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
 }
 .faq-item.open .faq-arrow {
     transform: rotate(180deg);
+}
+.faq-question:hover .faq-arrow svg path {
+    stroke: #fff;
 }
 .faq-answer {
   background: #fff;
@@ -742,11 +771,15 @@ body {
     outline: none;
 }
 #to-top-btn .to-top-arrow {
-    font-size: 1.5em;
-    font-weight: bold;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('./assets/ar-up.svg') no-repeat center / contain;
+    /* hide the unicode arrow character */
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
     margin: 0;
-    color: #222;
-    line-height: 1;
 }
 #to-top-btn .to-top-text {
     font-size: 0.95em;
@@ -761,7 +794,8 @@ body {
         font-size: 0.95rem;
     }
     #to-top-btn .to-top-arrow {
-        font-size: 1.1em;
+        width: 18px;
+        height: 18px;
     }
     #to-top-btn .to-top-text {
         font-size: 0.8em;
@@ -904,6 +938,14 @@ body {
     margin: 0 auto;
   }
 
+  html[lang='en'] h1 {
+    font-size:38px;
+  }
+
+  html[lang='fr'] h1 {
+    font-size:36px;
+  }
+
   p{
     font-size: 18px;
     line-height: 150%;
@@ -1005,14 +1047,15 @@ body {
     display: flex;
     flex-direction: column;
     align-self: center;
-    font-size: 1em;
+    font-size: 16px;
     margin-left: auto;
     padding: 0.4em 1em;
     background: #F27405;
     color: #fff;
     border-radius: 4px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 0;
+    cursor: pointer;
   }
   nav {
     display: none !important;
@@ -1053,7 +1096,7 @@ body {
   }
 
   /* Ensure burger menu shows lines + label */
-  .burger-menu {
+.burger-menu {
     height: auto;
     padding: 6px 8px;
     gap: 4px;
@@ -1177,13 +1220,18 @@ body {
   .map{
     order:1;
     z-index: 1;
-    height: 644px;
+    height: 680px;
   }
 
-  .message{
+  html[lang='en'] .message{
     order:2;
     position: relative;
-    bottom: 250px
+    bottom: 280px
+  }
+  html[lang='fr'] .message{
+    order:2;
+    position: relative;
+    bottom: 320px
   }
 
   .message p{
