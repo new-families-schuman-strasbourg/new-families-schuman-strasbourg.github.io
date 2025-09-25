@@ -7,7 +7,7 @@
     --mobile-columns:2;
     --mobile-margin: 16px;
     --mobile-gutter: 16px;
-    --mobile-column-width: calc((var(--mobile-desgin-width) - (var(--mobile-columns) - 1) * var(--mobile-gutter)) / var(--mobile-columns));
+    --mobile-column-width: calc((var(--mobile-design-width) - (var(--mobile-columns) - 1) * var(--mobile-gutter)) / var(--mobile-columns));
     --column-width: calc((var(--design-width) - (var(--columns) - 1) * var(--gutter)) / var(--columns));
   }  
 
