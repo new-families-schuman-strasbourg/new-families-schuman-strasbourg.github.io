@@ -328,11 +328,6 @@ body {
     height .3s ease;
 }
 
-.card:hover, .card:focus-visible {
-    box-shadow: 0 0 12px rgba(0,0,0,0.12);
-    gap: 12px;
-}
-
 .card:hover .card-content img, .card:focus-visible .card-content img {
     transform: scale(1.18);
 }
@@ -410,6 +405,7 @@ body {
 .card:focus-visible {
     box-shadow: 0 0 12px 0 rgba(0,0,0,0.12);
     transition: box-shadow 0.2s;
+    gap: 12px;
 }
 
 .card h4:hover,
@@ -574,11 +570,6 @@ body {
     height: 14px;
     margin-left: 0.5em;
     background: url('./assets/arrow-right.svg') no-repeat center / contain;
-    /* hide any unicode arrow character */
-    color: transparent;
-    font-size: 0;
-    line-height: 0;
-    vertical-align: middle;
 }
 
 /* FAQ Accordion */
@@ -693,7 +684,7 @@ body {
 
   .expandable-section {
     overflow: auto;
-    min-height: 1437px;
+
     opacity: 0;
     padding: 0;
     box-sizing: border-box;
@@ -1268,4 +1259,8 @@ body {
     padding: 20px;
     text-align: center;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
 }
