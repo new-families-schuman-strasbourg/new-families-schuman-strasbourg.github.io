@@ -7,13 +7,16 @@
     const userLang = navigator.language || navigator.userLanguage;
 
     if (userLang.startsWith("fr")) {
-      window.location.href = "fr/index.html";
+      window.location.replace = ("/fr/index.html");
     } else {
-      window.location.href = "en/index.html";
+      window.location.replace = ("/en/index.html");
     }
   </script>
 </head>
 <body>
   <p>Redirecting...</p>
+  +  <noscript>
++    <p><a href="/fr/index.html">Aller à la version française</a> | <a href="/en/index.html">Go to the English version</a></p>
++  </noscript>
 </body>
 </html>

@@ -41,9 +41,6 @@
       <a class="mobile-logo-link" href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/" target="_blank" aria-label="École Internationale Robert Schuman">
         <img class="mobile-logo" src="../assets/École Internationale Robert Schuman.svg" alt="École Internationale Robert Schuman" />
       </a>
-      <a class="mobile-logo-link" href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/" target="_blank" aria-label="École Internationale Robert Schuman">
-        <img class="mobile-logo" src="../assets/École Internationale Robert Schuman.svg" alt="École Internationale Robert Schuman" />
-      </a>
       <button class="mobile-nav-close" aria-label="Close menu">
         <img src="../assets/X close menu.svg" alt="Close" />
       </button>
@@ -338,7 +335,7 @@
               <li>Dans certains cas, le <strong>PAI</strong> peut autoriser les familles à fournir un repas complet préparé à la maison pour leur enfant.</li>
               <li>Pour organiser un PAI, contactez les services périscolaires de l'école à l'adresse suivante:<strong><a href="mailto:periscolaireeteducatif-robertschuman@strasbourg.eu">periscolaireeteducatif-robertschuman@strasbourg.eu</a></strong></li>
             </ul>
-            <br><p>Pour plus d'informations sur les services de santé scolaire, consultez le site: <strong><a href="https://www.strasbourg.eu/sante-ecole" target="_blank">strasbourg.eu/sante-ecole</a></strong>.</p>
+            <br><p>Pour plus d'informations sur les services de santé scolaire, consultez le site: <strong><a href="https://www.strasbourg.eu/sante-ecole" target="_blank" rel="noopener noreferrer">strasbourg.eu/sante-ecole</a></strong>.</p>
 </div>
         </li>
         <li class="faq-item">
@@ -538,23 +535,37 @@
     document.addEventListener('DOMContentLoaded', function() {
       // FAQ accordion logic
       document.querySelectorAll('.faq-list').forEach(faqList => {
+        // Initialise all faq-questions with aria-expanded="false"
+        faqList.querySelectorAll('.faq-question').forEach(btn => {
+        btn.setAttribute('aria-expanded', 'false');
+        });
         faqList.querySelectorAll('.faq-question').forEach(btn => {
           btn.addEventListener('click', function() {
             const item = btn.closest('.faq-item');
             const answer = item.querySelector('.faq-answer');
             const isOpen = item.classList.contains('open');
+            // ensure IDs for aria-controls
+            if (!answer.id) {
+              answer.id = 'faq-answer-' + Math.random().toString(36).substr(2, 9);
+              btn.setAttribute('aria-controls', answer.id);
+            }
             // Close all
             faqList.querySelectorAll('.faq-item').forEach(i => {
               i.classList.remove('open');
               i.querySelector('.faq-arrow').classList.remove('rotated');
               const ans = i.querySelector('.faq-answer');
               if (ans) ans.style.display = 'none';
+              const qBtn = i.querySelector('.faq-question');
+              if (qBtn) qBtn.setAttribute('aria-expanded', 'false');
             });
             // Open this one if it wasn't open
             if (!isOpen) {
               item.classList.add('open');
               answer.style.display = 'block';
               btn.querySelector('.faq-arrow').classList.add('rotated');
+              btn.setAttribute('aria-expanded', 'true');
+            } else {
+              btn.setAttribute('aria-expanded', 'false');
             }
           });
         });
@@ -595,6 +606,7 @@ document.querySelectorAll('.card').forEach((card) => {
   });
   // Keyboard accessibility
   card.setAttribute('tabindex', '0');
+  card.setAttribute('role', 'button');
   card.addEventListener('keydown', function(e) {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();

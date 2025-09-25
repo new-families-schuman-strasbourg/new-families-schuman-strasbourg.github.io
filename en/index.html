@@ -41,9 +41,6 @@
       <a class="mobile-logo-link" href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/" target="_blank" aria-label="École Internationale Robert Schuman">
         <img class="mobile-logo" src="../assets/École Internationale Robert Schuman.svg" alt="École Internationale Robert Schuman" />
       </a>
-      <a class="mobile-logo-link" href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/" target="_blank" aria-label="École Internationale Robert Schuman">
-        <img class="mobile-logo" src="../assets/École Internationale Robert Schuman.svg" alt="École Internationale Robert Schuman" />
-      </a>
       <button class="mobile-nav-close" aria-label="Close menu">
         <img src="../assets/X close menu.svg" alt="Close" />
       </button>
@@ -211,7 +208,7 @@
           </div>
 </li>
 <li class="faq-item">
-  <button class="faq-question"><div class="faq-left"><span class="faq-num">6.</span> <span class="faq-text">What should I do if my child struggles academically</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+  <button class="faq-question"><div class="faq-left"><span class="faq-num">6.</span> <span class="faq-text">What should I do if my child struggles academically?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
   <div class="faq-answer" style="display:none;">
     <ul class="info-ul">
       <br><li><strong>Teacher Communication:</strong> Parents are encouraged to speak with the teacher to understand the child's challenges and work together on solutions.</li><br>
@@ -339,7 +336,7 @@
               <li>In some cases, the PAI may allow families to provide a complete packed meal for their child.</li>
               <br><li>To arrange a PAI, contact the school's extracurricular services at: <a href="mailto:periscolaireeteducatif-robertschuman@strasbourg.eu">periscolaireeteducatif-robertschuman@strasbourg.eu</a></li>
             </ul>
-            <br><p>For more information on school health services, visit <a href="https://www.strasbourg.eu/sante-ecole" target="_blank">strasbourg.eu/sante-ecole</a>.</p>
+            <br><p>For more information on school health services, visit <a href="https://www.strasbourg.eu/sante-ecole" target="_blank" rel="noopener noreferrer">strasbourg.eu/sante-ecole</a>.</p>
 
 </div>
         </li>
@@ -540,23 +537,37 @@
     document.addEventListener('DOMContentLoaded', function() {
       // FAQ accordion logic
       document.querySelectorAll('.faq-list').forEach(faqList => {
+        // Initialise all faq-questions with aria-expanded="false"
+        faqList.querySelectorAll('.faq-question').forEach(btn => {
+        btn.setAttribute('aria-expanded', 'false');
+        });
         faqList.querySelectorAll('.faq-question').forEach(btn => {
           btn.addEventListener('click', function() {
             const item = btn.closest('.faq-item');
             const answer = item.querySelector('.faq-answer');
             const isOpen = item.classList.contains('open');
+            // ensure IDs for aria-controls
+            if (!answer.id) {
+              answer.id = 'faq-answer-' + Math.random().toString(36).substr(2, 9);
+              btn.setAttribute('aria-controls', answer.id);
+            }
             // Close all
             faqList.querySelectorAll('.faq-item').forEach(i => {
               i.classList.remove('open');
               i.querySelector('.faq-arrow').classList.remove('rotated');
               const ans = i.querySelector('.faq-answer');
               if (ans) ans.style.display = 'none';
+              const qBtn = i.querySelector('.faq-question');
+              if (qBtn) qBtn.setAttribute('aria-expanded', 'false');
             });
             // Open this one if it wasn't open
             if (!isOpen) {
               item.classList.add('open');
               answer.style.display = 'block';
               btn.querySelector('.faq-arrow').classList.add('rotated');
+              btn.setAttribute('aria-expanded', 'true');
+            } else {
+              btn.setAttribute('aria-expanded', 'false');
             }
           });
         });
@@ -597,6 +608,7 @@ document.querySelectorAll('.card').forEach((card) => {
   });
   // Keyboard accessibility
   card.setAttribute('tabindex', '0');
+  card.setAttribute('role', 'button');
   card.addEventListener('keydown', function(e) {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
