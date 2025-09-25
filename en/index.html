@@ -78,7 +78,7 @@
         <div class="card-content">
             <img class="icon-support" src="../assets/help_2597085_2.svg" alt="Support icon">
         </div>
-      <h4>Support to families who do not speak English</h4>
+      <h4>Support to families who do not speak French</h4>
       <button>READ MORE</button>
     </div>
     <div class="card yellow" data-target="meal">
@@ -185,7 +185,7 @@
               <li><strong>End-of-Year Evaluation:</strong> At the end of the school year, teachers assess whether the child is ready to move to the next grade level. Special attention is given to students who might need additional support.</li><br>
               <li><strong>During the school year,</strong> other meetings can be requested by parents or teachers.</li>
             </ul>
-          </div
+          </div>
         </li>
     <li class="faq-item">
       <button class="faq-question"><div class="faq-left"><span class="faq-num">4.</span> <span class="faq-text">Expected parents involvement</span></div><span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
@@ -232,7 +232,7 @@
     <div class="exp-col">
       <p>École Élémentaire Internationale Robert Schuman in Strasbourg offers support for students and families who do not speak French fluently.</p><br>
       <p>Dedicated language programs and international sections help ease the transition into the French school system, while various parent associations can assist with communication and school-related matters.</p>
-      <p>More detailed informartion below:</p>
+      <p>More detailed information below:</p>
       </div>
     </div>
       <ul class="faq-list">
@@ -344,7 +344,7 @@
 </div>
         </li>
         <li class="faq-item">
-          <button class="faq-question"><div class="faq-left"><span class="faq-num">7.</span> <span class="faq-text">Arranging pick ups by another adults</span></div> <span class="faq-arrow">&#8595;</span></button>
+          <button class="faq-question"><div class="faq-left"><span class="faq-num">7.</span> <span class="faq-text">Arranging pickups by another adults</span></div> <span class="faq-arrow">&#8595;</span></button>
           <div class="faq-answer" style="display:none;">
             <br><p>If someone other than a parent or legal guardian will pick up your child, you must provide written authorization. This allows the school to ensure safety.</p>
             <br><p>Please inform your child's teacher or the school administration in advance, supplying the full name and relationship of the authorized person.</p>
@@ -491,10 +491,10 @@
         <div class="links">
             <h5>Quick Links</h5>
             <div class="links-list">
-                <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank">Visit</a>
-                <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/notre-ecole/admission/" target="_blank">Apply</a>
-                <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank">Contact</a>
-                <a href="https://www.fcpe.asso.fr/" target="_blank">About FCPE</a>  
+          <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank" rel="noopener noreferrer">Visit</a>
+          <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/notre-ecole/admission/" target="_blank" rel="noopener noreferrer">Apply</a>
+          <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank" rel="noopener noreferrer">Contact</a>
+          <a href="https://www.fcpe.asso.fr/" target="_blank" rel="noopener noreferrer">About FCPE</a>  
             </div>
         </div>
     
@@ -722,8 +722,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Language switch redirects
   const enBtn = document.getElementById('en');
   const frBtn = document.getElementById('fr');
-  if (enBtn) enBtn.addEventListener('click', function() { window.location.href = 'en/index.html'; });
-  if (frBtn) frBtn.addEventListener('click', function() { window.location.href = 'fr/index.html'; });
+  if (enBtn) enBtn.addEventListener('click', function() { window.location.href = '/en/index.html'; });
+  if (frBtn) frBtn.addEventListener('click', function() { window.location.href = '/fr/index.html'; });
   // Language toggle: Only show EN on mobile
   function handleLanguageToggle() {
     const enBtn = document.getElementById('en');

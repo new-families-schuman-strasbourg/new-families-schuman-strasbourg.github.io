@@ -155,7 +155,6 @@ body {
     padding: 0px 16px 200px 16px; /* extra top padding for logo & close */
     overflow-y: auto;
     box-sizing: border-box;
-    display: flex;
     flex-direction: column;
     gap: 8px;
     align-items: center; 
