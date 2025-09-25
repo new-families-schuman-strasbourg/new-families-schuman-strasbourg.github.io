@@ -3,11 +3,11 @@
     --columns: 12;
     --margin: 32px;
     --gutter: 32px;
-    --mobile-desgn-width: 375px;
+    --mobile-design-width: 375px;
     --mobile-columns:2;
     --mobile-margin: 16px;
     --mobile-gutter: 16px;
-    --mobile-column-width: calc((var(--mobile-desgn-width) - (var(--mobile-columns) - 1) * var(--mobile-gutter)) / var(--mobile-columns));
+    --mobile-column-width: calc((var(--mobile-desgin-width) - (var(--mobile-columns) - 1) * var(--mobile-gutter)) / var(--mobile-columns));
     --column-width: calc((var(--design-width) - (var(--columns) - 1) * var(--gutter)) / var(--columns));
   }  
 
@@ -174,7 +174,7 @@ body {
 .mobile-nav-close {
     position: absolute;
     top: 64px;
-    left: 283px;
+    right: 16px;
     width: 46px;
     height: 46px;
     padding: 0;
