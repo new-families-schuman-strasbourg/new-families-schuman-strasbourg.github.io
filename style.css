@@ -75,15 +75,6 @@ body {
     display: flex;
     flex-direction: column;
   }
-
-  .expandable-content {
-    max-width: 1440px;
-  }
-  header, .upper-header, .lower-header {
-    max-width: 1440px;
-  }
-
-
   .upper-header {
     display: flex;
     flex-direction: row;
@@ -140,6 +131,12 @@ body {
     align-items: center; 
     text-align: center;
     justify-content: center;
+}
+
+/* Prevent background scroll while mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+  touch-action: none;
 }
 .mobile-nav a {
     color: #1E1E1E;
@@ -549,6 +546,12 @@ body {
     width: 14px;
     height: 14px;
     margin-left: 0.5em;
+}
+
+.quick-link-arrow svg {
+    width: 14px;
+    height: 14px;
+    display: block;
 }
 
 /* FAQ Accordion */

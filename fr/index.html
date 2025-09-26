@@ -37,7 +37,7 @@
         <button class="language" id="fr">FR</button>
       </div>
     </div>
-    <div class="mobile-nav" id="mobile-nav" style="display: none;">
+    <div class="mobile-nav" id="mobile-nav">
       <a class="mobile-logo-link" href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/" target="_blank" rel="noopener noreferrer" aria-label="École Internationale Robert Schuman">
         <img class="mobile-logo" src="../assets/Ecole_Internationale_Robert_Schuman.svg" alt="École Internationale Robert Schuman" />
       </a>
@@ -722,17 +722,30 @@ document.addEventListener('DOMContentLoaded', function() {
       const willOpen = mobileNav.style.display !== 'flex';
       mobileNav.style.display = willOpen ? 'flex' : 'none';
       burger.setAttribute('aria-expanded', String(willOpen));
+      document.body.classList.toggle('menu-open', willOpen);
     });
   }
   if (mobileNav && mobileNavClose) {
     mobileNavClose.addEventListener('click', function() {
       mobileNav.style.display = 'none';
+      document.body.classList.remove('menu-open');
+      burger && burger.setAttribute('aria-expanded', 'false');
     });
   }
+    // Close menu on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobileNav && mobileNav.style.display === 'flex') {
+      mobileNav.style.display = 'none';
+      document.body.classList.remove('menu-open');
+      burger && burger.setAttribute('aria-expanded', 'false');
+    }
+  });
   if (mobileNav) {
     mobileNav.querySelectorAll('a').forEach(function(link) {
       link.addEventListener('click', function() {
         mobileNav.style.display = 'none';
+        document.body.classList.remove('menu-open');
+        burger && burger.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -755,6 +768,23 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   handleLanguageToggle();
   window.addEventListener('resize', handleLanguageToggle);
+   // Restore expandable sections under their container on desktop
+  function restoreSectionsOnDesktop() {
+    if (window.innerWidth > 900) {
+      const container = document.querySelector('.expandable-content');
+      if (!container) return;
+      // Preserve intended order based on the cards sequence
+      document.querySelectorAll('.card').forEach(card => {
+        const targetId = card.getAttribute('data-target');
+        const section = targetId && document.getElementById(targetId);
+        if (section && section.parentElement !== container) {
+          container.appendChild(section);
+        }
+      });
+    }
+  }
+  window.addEventListener('resize', restoreSectionsOnDesktop);
+  restoreSectionsOnDesktop();
 });
 </script>
 </body>

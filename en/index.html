@@ -37,7 +37,7 @@
         <button class="language" id="fr">FR</button>
       </div>
     </div>
-    <div class="mobile-nav" id="mobile-nav" style="display: none;">
+    <div class="mobile-nav" id="mobile-nav">
       <a class="mobile-logo-link" href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/" target="_blank" rel="noopener noreferrer" aria-label="École Internationale Robert Schuman">
         <img class="mobile-logo" src="../assets/Ecole_Internationale_Robert_Schuman.svg" alt="École Internationale Robert Schuman" />
       </a>
@@ -258,7 +258,7 @@
             <ul class="info-ul">
               <br><li>International sections <strong>(British, German, Spanish, and Italian)</strong> - in these sections teachers often have some knowledge of the section's language.</li>
               <br><li><strong>Parent Associations</strong>: The school has an active parent association, <strong>FCPE</strong>, which includes members from diverse linguistic backgrounds. This association can assist in bridging communication gaps between non-French-speaking parents and the school staff.<br>Other associations are: <em>Apelevis</em> and <em>Liste Indépendante</em>.</li>
-              <br><li><strong>Direct Communication</strong>: For specific concerns or to discuss your child's progress, you can directly contact the school administration: ce.0672269C@ac-strasbourg.fr</li>
+              <br><li><strong>Direct Communication</strong>: For specific concerns or to discuss your child's progress, you can directly contact the school administration: <a href="mailto:ce.0672269c@ac-strasbourg.fr">ce.0672269c@ac-strasbourg.fr</a></li>
             </ul>
           </div>
         </li>
@@ -407,8 +407,8 @@
       </div>
       <aside class="quick-links">
         <div class="quick-links-title">QUICK LINKS</div>
-        <a href="mailto:periscolaireeteducatif-robertschuman@strasbourg.eu" class="quick-link">Email to arrange PAI <span class="quick-link-arrow">&rarr;</span></a>
-        <a href="https://www.strasbourg.eu/sante-ecole" target="_blank" rel="noopener noreferrer" class="quick-link">School health services <span class="quick-link-arrow">&rarr;</span></a>
+        <a href="mailto:periscolaireeteducatif-robertschuman@strasbourg.eu" class="quick-link">Email to arrange PAI <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a href="https://www.strasbourg.eu/sante-ecole" target="_blank" rel="noopener noreferrer" class="quick-link">School health services <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
       </aside>
   </div>
   <ul class="faq-list">
@@ -438,7 +438,7 @@
             <br><p>In the event of an emergency concerning your child during school hours at École Élémentaire Internationale Robert Schuman in Strasbourg, please contact the school administration directly:</p>
             <ul class="info-ul">
               <br><li>Phone: <strong>+33 (0)3 88 60 73 65</strong></li>
-              <br><li>Email: <strong>ce.0672269c@ac-strasbourg.fr</strong></li>
+              <br><li>Email: <strong><a href="mailto:ce.0672269c@ac-strasbourg.fr">ce.0672269c@ac-strasbourg.fr</a>ce.0672269c@ac-strasbourg.fr</strong></li>
             </ul>
 </div>
         </li>
@@ -536,6 +536,7 @@
   
 // Example: Set the width of elements dynamically
     document.addEventListener('DOMContentLoaded', function() {
+
       // FAQ accordion logic
       document.querySelectorAll('.faq-list').forEach(faqList => {
         // Initialise all faq-questions with aria-expanded="false"
@@ -716,28 +717,40 @@ document.addEventListener('DOMContentLoaded', function() {
   const burger = document.querySelector('.burger-menu');
   const mobileNav = document.querySelector('.mobile-nav');
   const mobileNavClose = document.querySelector('.mobile-nav-close');
-  if (burger && mobileNav) {
+    if (burger && mobileNav) {
     burger.setAttribute('aria-controls', 'mobile-nav');
     burger.setAttribute('aria-expanded', 'false');
     burger.addEventListener('click', function() {
       const willOpen = mobileNav.style.display !== 'flex';
       mobileNav.style.display = willOpen ? 'flex' : 'none';
       burger.setAttribute('aria-expanded', String(willOpen));
+      document.body.classList.toggle('menu-open', willOpen);
     });
   }
   if (mobileNav && mobileNavClose) {
     mobileNavClose.addEventListener('click', function() {
       mobileNav.style.display = 'none';
+      document.body.classList.remove('menu-open');
+      burger && burger.setAttribute('aria-expanded', 'false');
     });
   }
+    // Close menu on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobileNav && mobileNav.style.display === 'flex') {
+      mobileNav.style.display = 'none';
+      document.body.classList.remove('menu-open');
+      burger && burger.setAttribute('aria-expanded', 'false');
+    }
+  });
   if (mobileNav) {
     mobileNav.querySelectorAll('a').forEach(function(link) {
       link.addEventListener('click', function() {
         mobileNav.style.display = 'none';
+        document.body.classList.remove('menu-open');
+        burger && burger.setAttribute('aria-expanded', 'false');
       });
     });
-  }
-  // Language switch redirects
+  }  // Language switch redirects
   const enBtn = document.getElementById('en');
   const frBtn = document.getElementById('fr');
   if (enBtn) enBtn.addEventListener('click', function() { window.location.replace('/en/index.html'); });
@@ -764,6 +777,24 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   handleLanguageToggle();
   window.addEventListener('resize', handleLanguageToggle);
+    // Restore expandable sections under their container on desktop
+  function restoreSectionsOnDesktop() {
+    if (window.innerWidth > 900) {
+      const container = document.querySelector('.expandable-content');
+      if (!container) return;
+      // Preserve intended order based on the cards sequence
+      document.querySelectorAll('.card').forEach(card => {
+        const targetId = card.getAttribute('data-target');
+        const section = targetId && document.getElementById(targetId);
+        if (section && section.parentElement !== container) {
+          container.appendChild(section);
+        }
+      });
+    }
+  }
+  window.addEventListener('resize', restoreSectionsOnDesktop);
+  restoreSectionsOnDesktop();
+  
 });
 </script>
 </body>
