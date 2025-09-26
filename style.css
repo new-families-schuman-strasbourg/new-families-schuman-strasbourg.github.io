@@ -76,26 +76,6 @@ body {
     flex-direction: column;
   }
 
-  
-  .main-wrapper {
-  display: block;
-  width: 1440px;
-  max-width: 100%;
-  min-height: 100vh;
-  background: #f8f6f4;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-  .main-content {
-  width: 100%;
-  max-width: 1440px;
-  min-width: 0;
-  background: #f8f6f4;
-  margin-left: auto;
-  margin-right: auto;
-}
-
   .expandable-content {
     max-width: 1440px;
   }
@@ -569,7 +549,6 @@ body {
     width: 14px;
     height: 14px;
     margin-left: 0.5em;
-    background: url('./assets/arrow-right.svg') no-repeat center / contain;
 }
 
 /* FAQ Accordion */
@@ -631,7 +610,7 @@ body {
 .faq-answer {
   background: #fff;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
-  padding: 0px 36px 24px 36px;
+  padding: 0px 36px 0px 36px;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -769,12 +748,6 @@ body {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background: url('./assets/ar-up.svg') no-repeat center / contain;
-    /* hide the unicode arrow character */
-    color: transparent;
-    font-size: 0;
-    line-height: 0;
-    margin: 0;
 }
 #to-top-btn .to-top-text {
     font-size: 0.95em;
@@ -918,8 +891,8 @@ body {
   }
   .main-wrapper {
     display: block;
-    width: 375px;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 375px;
     min-width: 0;
     background: #fbfbfb;
     margin: 0 auto;
@@ -1178,7 +1151,7 @@ body {
     align-self: center;
   }
   .faq-item.open .faq-answer{
-    padding: 0px 15px 24px 15px;
+    padding: 0px 15px 0px 15px;
   }
 
   .faq-answer p{
