@@ -230,6 +230,10 @@ body.menu-open {
     font-weight: 300;
     transition: font-weight 0.3s ease;
   }
+  .school-name:focus {
+    outline: 3px solid #f27405;
+    outline-offset: 2px;
+  }
 
 
 
@@ -383,6 +387,10 @@ body.menu-open {
     box-shadow: 0 0 12px 0 rgba(0,0,0,0.12);
     transition: box-shadow 0.2s;
     gap: 12px;
+}
+#to-top-btn:focus-visible {
+  outline: 3px solid #f27405;
+  outline-offset: 2px;
 }
 
 .card h4:hover,
@@ -575,6 +583,11 @@ body.menu-open {
     color: #fff;
     transition: background 0.3s, color 0.3s;
 }
+.faq-question:focus-visible {
+  outline: 3px solid #f27405;
+  outline-offset: 2px;
+}
+
 
 .faq-question {
     font-weight: 400;
@@ -838,6 +851,10 @@ body.menu-open {
     color: #f27405;
     transition: background-color 0.3s, color 0.3s;
   }
+  .school-website:focus-visible {
+    outline: 3px solid #f27405;
+    outline-offset: 2px;
+  }
 
   .links {
     display: flex;
@@ -966,21 +983,6 @@ body.menu-open {
   background-color: #f27405;
   opacity: 100%;
 }
-.language-toggle button {
-  display: none;
-}
-.language-toggle .language.active {
-  display: flex;
-  flex-direction: column;
-  font-size: 1em;
-  margin-left: auto;
-  padding: 0.4em 1em;
-  background: #F27405;
-  color: #fff;
-  border-radius: 4px;
-  font-weight: 600;
-  margin-bottom: 0;
-}
 
   .school-name a {
     color: #1E1E1E;
@@ -1022,8 +1024,6 @@ body.menu-open {
     margin-left: auto;
     padding: 0.4em 1em;
     background: #F27405;
-    color: #fff;
-    border-radius: 4px;
     font-weight: 500;
     margin-bottom: 0;
     cursor: pointer;

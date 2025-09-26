@@ -58,7 +58,7 @@
             <p>Toutes les infos clés sur l’école sont réunies ici - sélectionnées avec soin par des parents pour vous aider à bien démarrer.</p>
 
         </div>
-        <img src="../assets/hero_pic.png" alt="Color pencils">
+        <img src="../assets/hero_pic.png" alt="Crayons de couleur">
     </div>
   </header>
 
@@ -406,8 +406,7 @@
       <aside class="quick-links">
         <div class="quick-links-title">LIENS RAPIDES</div>
         <a href="mailto:periscolaireeteducatif-robertschuman@strasbourg.eu" class="quick-link">Email pour organiser un PAI <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-        <a href="https://www.strasbourg.eu/sante-ecole" target="_blank" rel="noopener noreferrer
-" class="quick-link">Services de santé scolaire <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a href="https://www.strasbourg.eu/sante-ecole" target="_blank" rel="noopener noreferrer" class="quick-link">Services de santé scolaire <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
       </aside>
   </div>
   <ul class="faq-list">
@@ -436,7 +435,7 @@
           <div class="faq-answer">
             <br><p>En cas d’urgence concernant votre enfant pendant les heures scolaires à l’École Élémentaire Internationale Robert Schuman à Strasbourg, veuillez contacter directement l’administration de l’école:</p>
             <ul class="info-ul">
-              <br><li>Téléphone: <strong>+33 (0)3 88 60 73 65</strong></li>
+              <br><li>Téléphone: <strong>03 88 60 73 65</strong></li>
               <br><li>Email: <strong><a href="mailto:ce.0672269c@ac-strasbourg.fr">ce.0672269c@ac-strasbourg.fr</a></strong></li>
             </ul>
 </div>
@@ -466,7 +465,7 @@
   <!-- Footer Section -->
    <section class="upper-footer">
         <div class="contact">
-            <img class="school_picture" src="../assets/pic_of_school_for_footer.png" alt="Picture of the school">
+            <img class="school_picture" src="../assets/pic_of_school_for_footer.png" alt="Photo de l'école">
             <div class="contact-info">
                 <h5>École Élémentaire<br>Internationale Robert-Schuman</h5>
                 <p>Directrice: Mme Celia Masquera</p>
@@ -541,6 +540,14 @@
         faqList.querySelectorAll('.faq-question').forEach(btn => {
         btn.setAttribute('aria-expanded', 'false');
         });
+        // Initialise all answers as hidden
+        faqList.querySelectorAll('.faq-answer').forEach(ans => {
+          ans.setAttribute('aria-hidden', 'true');
+          ans.setAttribute('role', 'region');
+          if (!ans.id) ans.id = 'faq-answer-' + Math.random().toString(36).slice(2, 11);
+          const qBtn = ans.closest('.faq-item')?.querySelector('.faq-question');
+          if (qBtn) qBtn.setAttribute('aria-controls', ans.id);
+        });
         faqList.querySelectorAll('.faq-question').forEach(btn => {
           btn.addEventListener('click', function() {
             const item = btn.closest('.faq-item');
@@ -548,7 +555,7 @@
             const isOpen = item.classList.contains('open');
             // ensure IDs for aria-controls
             if (!answer.id) {
-              answer.id = 'faq-answer-' + Math.random().toString(36).substr(2, 9);
+              answer.id = 'faq-answer-' + Math.random().toString(36).slice(2, 11);
               btn.setAttribute('aria-controls', answer.id);
               answer.setAttribute('role', 'region');
               answer.setAttribute('aria-hidden', 'true');
