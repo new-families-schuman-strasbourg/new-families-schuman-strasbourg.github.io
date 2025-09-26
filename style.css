@@ -482,12 +482,6 @@ body.menu-open {
     margin-top: 0;
     width: 672px;
 }
-.section-subtitle {
-    font-size: 1.25rem;
-    font-weight: 400;
-    margin-bottom: 1.5em;
-    color: #fff;
-}
 
 /* Quick links panel */
 .quick-links {
@@ -1133,7 +1127,7 @@ body.menu-open {
 
   .faq-question{
     font-size: 20px;
-    height: 120px;
+    min-height: 72px;
     align-items: center;
   }
   .faq-item{
