@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>École Internationale Robert Schuman</title> 
+</head>
+<body>
+  <div class="main-wrapper">
+    <div class="main-content">
+    <!-- Header Section -->
+  <header>
+    <div class="upper-header">
+  <p class="school-name"><a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #1e1e1e;">École Internationale Robert Schuman</a></p>
+  <a class="school-logo-link" href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/" target="_blank" rel="noopener noreferrer" aria-label="École Internationale Robert Schuman">
+    <img class="school-logo" src="../assets/Ecole_Internationale_Robert_Schuman.svg" alt="École Internationale Robert Schuman" />
+  </a>
+  <nav>
+    <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank" rel="noopener noreferrer">Visiter</a>
+    <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/notre-ecole/admission/" target="_blank" rel="noopener noreferrer">Postuler</a>
+    <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank" rel="noopener noreferrer">Contacter</a>
+  </nav>
+ 
+    <div class="upper-header-controls">
+  <button class="burger-menu" aria-label="Open navigation menu" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+        <p>Menu</p>
+      </button>
+      <div class="language-toggle">
+  <button class="language active" id="en" type="button">EN</button>
+  <button class="language" id="fr" type="button">FR</button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a class="mobile-logo-link" href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/" target="_blank" rel="noopener noreferrer" aria-label="École Internationale Robert Schuman">
+        <img class="mobile-logo" src="../assets/Ecole_Internationale_Robert_Schuman.svg" alt="École Internationale Robert Schuman" />
+      </a>
+  <button class="mobile-nav-close" aria-label="Close menu" type="button">
+        <img src="../assets/X close menu.svg" alt="Close" />
+      </button>
+      <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank" rel="noopener noreferrer">Visiter</a>
+      <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/notre-ecole/admission/" target="_blank" rel="noopener noreferrer">Postuler</a>
+      <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank" rel="noopener noreferrer">Contacter</a>
+    </div>
+</div>
+
+    <div class="lower-header">
+        <div class="hero">
+            <h1>Bienvenue aux<br>Nouvelles familles!</h1>
+            <p>Félicitations, votre enfant est admis à l'École Élémentaire Internationale Robert-Schuman!</p>
+            <br>
+            <p>Toutes les infos clés sur l’école sont réunies ici - sélectionnées avec soin par des parents pour vous aider à bien démarrer.</p>
+
+        </div>
+        <img src="../assets/hero_pic.png" alt="Crayons de couleur">
+    </div>
+  </header>
+
+  <!-- Info Cards Section -->
+  <section class="info-cards">
+    <div class="card blue" data-target="info-system">
+        <div class="card-content">
+            <img class="icon-school" src="../assets/school_2602412_3.svg" alt="School icon">
+        </div>
+      <h4>La vie scolaire et le système éducatif français</h4>
+      <button type="button">EN SAVOIR PLUS</button>
+    </div>
+    <div class="card light-blue" data-target="support">
+        <div class="card-content">
+            <img class="icon-support" src="../assets/help_2597085_2.svg" alt="Support icon">
+        </div>
+      <h4>Soutien aux familles ne parlant pas français</h4>
+      <button type="button">EN SAVOIR PLUS</button>
+    </div>
+    <div class="card yellow" data-target="meal">
+        <div class="card-content">
+            <img class="icon-meal" src="../assets/soup_1980804_2.svg" alt="Meal icon">
+        </div>
+      <h4>Repas et transports</h4>
+      <button type="button">EN SAVOIR PLUS</button>
+    </div>
+    <div class="card orange" data-target="adaptation">
+        <div class="card-content">
+            <img class="icon-adaptation" src="../assets/talk_8121633_2.svg" alt="Adaptation icon">
+        </div>
+      <h4>Soutien social et émotionnel: adaptation</h4>
+      <button type="button">EN SAVOIR PLUS</button>
+    </div>
+    <div class="card red" data-target="health">
+        <div class="card-content">
+            <img class="icon-health" src="../assets/health-insurance_18608947_2.svg" alt="Health icon">
+        </div>
+      <h4>Santé et sécurité: assurer le bien-être de votre enfant</h4>
+      <button type="button">EN SAVOIR PLUS</button>
+    </div>
+  </section>
+
+  <!-- Expandable content section -->
+   <section class="expandable-content">
+   
+    <div id="info-system" class="expandable-section">
+  <div class="expandable-section-content">
+  <h2 class="section-header">Journée type à l'école Schuman</h2>
+  <div class="expandable-main-row">
+    <div class="exp-col" >
+      <p>Vous trouverez ci-dessous les informations clés sur l’organisation de la semaine dans notre école primaire publique.</p>
+      <p style="font-style: italic;">Bien que cela reflète la structure actuelle, de petits changements peuvent survenir avec le temps</p>
+      <ul>
+            <li>Les étudiants ont cours <strong>le lundi, mardi, jeudi, et vendredi de 8h30 à 12h00 et de 14h00 à 16h30.</strong></li>
+            <li>L'école accueille les élèves à partir de <strong>8h20 le matin et 13h50 l'après-midi.</strong></li>
+            <li><strong>Le service de cantine scolaire est un temps périscolaire</strong> qui comprend l'accueil de <strong>12h00 à 14h00</strong>, y inclus le temps du repas.</li>
+          </ul>
+          <p class="only-desktop">Après les cours, les élèves peuvent soit rester à la garderie périscolaire (les activités périscolaires organisées par la ville), soit rentrer avec leur famille.</p>
+          <p class="only-desktop">Pendant les heures de cours, et pour des raisons de sécurité, l'école reste fermée à clé. Les personnes extérieures au service public de l'éducation n'ont pas accès librement aux locaux de l'école et doivent se présenter au personnel de surveillance.</p>
+          <p class="only-desktop">Toute absence d’élève doit être signalée le matin avant 9 heures.</p>
+          <p class="only-desktop">Vous pouvez trouver l'intégralité du règlement de l’école sur son <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank" rel="noopener noreferrer" style="color: #fbfbfb;">site</a></p>
+        </div>
+        <aside class="quick-links">
+          <div class="quick-links-title">LIENS RAPIDES</div>
+          <a href="https://www.strasbourg.eu/inscription-cantine" target="_blank" class="quick-link">Cantine scolaire <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/periscolaire-2/" target="_blank" rel="noopener noreferrer" class="quick-link">Périscolaire <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        </aside>
+        <ul class="mobile-only">
+          <li>La surveillance est assurée dans l’école à partir de 10 minutes avant le début des cours, jusqu’à la fin de la journée.</li>
+          <li>Pendant les heures de cours, et pour des raisons de sécurité, l'école reste fermée à clé. </li>
+          <li>Les personnes extérieures au service public de l'éducation n'ont pas accès librement aux locaux de l'école et doivent se présenter au personnel de surveillance.</li>
+          <li>Toute absence d’élève doit être signalée le matin avant 9 heures.</li>
+        </ul>
+      </div>
+      <h3 class="section-subtitle">Comprendre le système scolaire français</h3>
+      <div class="exp-col">
+        <p>Découvrez comment le système éducatif public français est organisé et en quoi il peut différer de ce à quoi vous êtes habitué.</p>
+        <p style="font-style: italic;">Cliquez sur les sections ci-dessous pour en savoir plus:</p>
+      </div>
+      <ul class="faq-list">
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">1.</span> <span class="faq-text">Comment le système scolaire français diffère-t-il d’ailleurs ?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <div class="exp-col">
+              <br><p>Le système scolaire français se distingue par sa structure, sa formalité et sa cohérence nationale. Voici quelques caractéristiques clés qui le différencient:</p><br>
+            <ul class="info-ul">
+              <li><strong>L'école commence plus tôt:</strong> Les enfants français commencent l'école à 3 ans (école maternelle).</li><br>
+              <li><strong>Journées scolaires longues:</strong>  Les journées vont souvent de 8h30 à 16h30, et l’école est fermée (il n’y a pas de cours) le mercredi.</li><br>
+              <li><strong>Périodes de vacances fréquentes:</strong> Il y a des vacances de 2 semaines tous les 6 à 7 semaines.</li><br>
+              <li><strong>Style formel:</strong> L'enseignement a tendance à être plus académique et moins axé sur le jeu, surtout dans les premières années.</li><br>
+              <li><strong>Programme national:</strong> Toutes les écoles publiques suivent le même programme national.</li><br>
+            </ul>
+            </div>
+          </div>
+        </li>
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">2.</span> <span class="faq-text">Vacances scolaires</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <br><p>L'année scolaire française est divisée en plusieurs périodes de vacances:</p>
+  <ul class="info-ul">
+    <li><strong>Vacances de la Toussaint:</strong> Une période de vacances de deux semaines à la fin du mois d'octobre.</li><br>
+    <li><strong>Vacances de Noël:</strong> Une période de vacances de deux semaines autour de Noël et du Nouvel An.</li><br>
+    <li><strong>Vacances d'hiver:</strong> Une période de vacances de deux semaines en février.</li><br>
+    <li><strong>Vacances de printemps:</strong>  Une période de vacances de deux semaines en avril.</li><br>
+    <li><strong>Vacances d'été:</strong> Une longue période de vacances qui commence début juillet et se termine en début septembre.</li><br>
+  </ul>
+  <p>Il y a aussi plusieurs jours fériés où les élèves ne vont pas à l'école, comme Pâques, le 1er mai, L'Armistice, etc.</p><br>
+  <p>La France est divisée en 3 zones pour les vacances des enfants et chacune a son propre temps de pause.</p><br>
+</div>
+        </li>
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">3.</span> <span class="faq-text">Évaluation des progrès de l’enfant</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <br><p>Dans le système scolaire français, les progrès des élèves sont régulièrement évalués à travers différentes méthodes :</p><br>
+            <ul class="info-ul">
+              <li><strong>Évaluation continue :</strong>  Les enseignants observent et évaluent le développement global des élèves, y compris leurs compétences sociales, leurs efforts et leur comportement. L'accent est mis sur la croissance individuelle de l’enfant plutôt que sur des notes spécifiques.</li><br>
+              <li><strong>Retours oraux :</strong> Plutôt que des notes formelles, les enseignants donnent des retours verbaux aux élèves, en se concentrant sur leurs points forts et les domaines à améliorer. Ces retours sont généralement donnés en classe et parfois partagés avec les parents.</li><br>
+              <li><strong>Bulletins:</strong>  Les enseignants remettent des bulletins de progrès à la fin de chaque trimestre, donnant des retours sur les points forts de l’enfant, les domaines à améliorer et ses progrès globaux.</li><br>
+              <li><strong>Rencontres parent-enseignant :</strong> Il y a généralement une réunion au début de l’année scolaire à l'école Schuman. Durant l'année scolaire, d'autres rencontres peuvent être demandées par les parents ou les enseignants.</li><br>
+              <li><strong>Évaluation de fin d’année:</strong>  À la fin de l’année scolaire, les enseignants évaluent si l’enfant est prêt à passer à la classe supérieure. Une attention particulière est portée aux élèves qui pourraient avoir besoin de soutien supplémentaire.</li><br>
+            </ul>
+          </div>
+        </li>
+    <li class="faq-item">
+      <button  type="button"class="faq-question"><div class="faq-left"><span class="faq-num">4.</span> <span class="faq-text">Implication attendue des parents </span></div><span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+      <div class="faq-answer">
+        <br><p>L’implication des parents dans les écoles publiques françaises est généralement plus limitée que dans certains autres pays:</p>
+        <ul class="info-ul">
+          <li><strong>Communication de base:</strong> Les familles sont invitées à rester informées via les bulletins d'information de l'école, les messages dans l'agenda de l'enfant, et les communications ponctuelles des enseignants.</li><br>
+          <li><strong>Associations de parents:</strong> La participation est volontaire. Ces associations permettent aux familles d’être représentées au conseil d’école et de s’impliquer davantage dans la vie scolaire.</li><br>
+          <li><strong>Aide lors des événements:</strong> Les adultes peuvent être sollicités pour accompagner des sorties scolaires, des cours de natation ou d’autres événements. Leur aide est appréciée et La classe doit avoir obligatoirement un minimum de parents accompagnateurs pour une sortie. Les parents ne sont pas obligés de participer, mais l’aide des parents est appréciée., mais elle n’est pas obligatoire.</li><br>
+          <li><strong>Suivi des devoirs:</strong> L’école n’attend pas un soutien scolaire intensif à la maison, mais les familles doivent s’assurer du suivi régulier des devoirs.</li><br>
+        </ul>
+</div>
+        </li>
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">5.</span> <span class="faq-text">Tests à passer dans d'autres écoles</span></div><span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <ul class="info-ul"> 
+              <br><li><strong>Changement d'école:</strong> Si une famille déménage ou demande un transfert, l’enfant peut changer d’école, généralement sans test académique, bien qu’une approbation administrative puisse être nécessaire.</li><br>
+              <li><strong>Évaluations nationales:</strong> Des évaluations nationales ont lieu en CP et en CE1 pour aider les enseignants à identifier les besoins des élèves. Ce ne sont pas des examens à réussir ou à échouer et ils n’ont pas d’impact sur le passage en classe supérieure.</li><br>
+              <li><strong>Écoles privées ou spécialisées:</strong>  En cas de transfert vers une école privée ou spécialisée, chaque établissement peut avoir ses propres critères ou évaluations informelles.</li><br>
+              <li><strong>Passage au Collège International de l'Esplanade (collège):</strong> Au cours du printemps, les élèves doivent déposer un dossier de candidature et passer des épreuves d’entrée dans la langue de la section choisie.</li><br>
+            </ul>
+          </div>
+</li>
+<li class="faq-item">
+  <button  type="button"class="faq-question"><div class="faq-left"><span class="faq-num">6.</span> <span class="faq-text">Que faire si votre enfant rencontre des difficultés scolaires</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+  <div class="faq-answer">
+    <ul class="info-ul">
+      <br><p>Dans le système scolaire public français, plusieurs étapes et soutiens sont disponibles si un enfant rencontre des difficultés académiques:</p>
+      <br><li><strong>Communication avec l'enseignant:</strong>  Il est conseillé aux parents de discuter avec l'enseignant pour comprendre les difficultés de l'enfant et travailler ensemble sur des solutions.</li><br>
+      <li><strong>Soutien personnalisé:</strong>  Les enseignants peuvent mettre en place des dispositifs de soutien tels que l'aide personnalisée (aide individuelle pendant ou en dehors des heures de classe) pour aider l'enfant.</li><br>
+      <li><strong>Équipes de soutien scolaire:</strong>  Si les difficultés persistent, l'école peut faire appel à une équipe de soutien (Enseignants spécialisés et psychologues) pour évaluer la situation et fournir une aide ciblée.</li><br>
+      <li><strong>Réunions de suivi scolaire:</strong> En cas de difficultés graves ou durables, des réunions peuvent être organisées entre les parents, les enseignants et le personnel scolaire pour élaborer un plan d’action.</li><br>
+      <li><strong>Redoublement:</strong> Dans certains cas, la proposition de redoubler une année scolaire peut être envisagée, mais cela est discuté soigneusement avec la famille et n’est pas automatique.</li><br>
+    </ul>
+</div>
+</li>
+      </ul>
+    </div>
+  </div>
+<div id="support" class="expandable-section">
+  <div class="expandable-section-content">
+  <h2 class="section-header">Cours de langue, séances de soutien pour les enfants, associations de parents, et plus encore</h2>
+  <div class="expandable-main-row">
+    <div class="exp-col">
+      <p>L'École Élémentaire Internationale Robert Schuman de Strasbourg propose un soutien aux élèves et aux familles qui ne parlent pas couramment le français.</p><br>
+      <p>Des programmes linguistiques dédiés et des sections internationales facilitent la transition vers le système scolaire français, tandis que diverses associations de parents peuvent aider à la communication et aux questions liées à l'école.</p>
+      <p>Informations plus détaillées ci-dessous:</p>
+      </div>
+    </div>
+      <ul class="faq-list">
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">1.</span> <span class="faq-text">Mon enfant sera-t-il aidé s’il ne parle pas français ?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <ul class="info-ul">
+              <li>Oui, l’établissement dispose d’une <strong>Unité Pédagogique pour Élèves Allophones Arrivants</strong>, (UPE2A), offrant un enseignement intensif du français langue étrangère pour faciliter leur intégration scolaire.</li><br>
+              <li>Les sections internationales (allemande, britannique, espagnole et italienne) visent à faciliter l’accueil et l’intégration des élèves étrangers dans le système éducatif français.</li><br>
+            </ul>
+            </div>
+        </li>
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">2.</span> <span class="faq-text">Mon enfant sera-t-il aidé s’il a des difficultés scolaires ?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <ul class="info-ul">
+              <br><li>L’école propose des <strong>Activités pédagogiques complémentaires</strong>(APC): des séances de soutien en petits groupes en dehors des heures de classe, axées sur des domaines tels que la lecture, l’écriture ou les mathématiques.</li>
+              <br><li>Pour les élèves rencontrant des difficultés plus importantes, <strong>un Programme personnalisé pour la Réussite Scolaire</strong>(PPRE) peut être mis en place en collaboration avec l’équipe enseignante et les parents, définissant des objectifs d’apprentissage adaptés et des stratégies personnalisées.</li>
+              <br><li>Si les difficultés persistent, l’école peut faire appel au <strong>Réseau d’Aides Spécialisées aux Élèves en Difficulté</strong> (RASED), composé d’enseignants spécialisés et de psychologues scolaires, pour fournir un accompagnement ciblé.</li>
+            </ul>
+            </div>
+        </li>
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">3.</span> <span class="faq-text">Comment parler à l’enseignant sans parler français ?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <ul class="info-ul">
+              <br><li><strong>Sections internationales:</strong> Dans ces sections (britannique, allemande, espagnole, italienne), les enseignants ont souvent une connaissance de la langue de la section, facilitant ainsi la communication avec les parents.</li>
+              <br><li><strong>Associations de parents:</strong> L’école dispose d’une association de parents active, la FCPE, regroupant des membres de diverses origines linguistiques. Cette association peut aider à établir un lien entre les parents non francophones et le personnel de l’école.</li>
+              <br><li><strong>Communication directe:</strong> Pour des préoccupations spécifiques ou pour discuter des progrès de votre enfant, vous pouvez contacter directement l’administration de l’école.</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+    <div id="meal" class="expandable-section">
+  <div class="expandable-section-content">
+  <h2 class="section-header">Options de repas, besoins alimentaires, trajets vers l’école, et plus encore</h2>
+  <div class="expandable-main-row">
+    <div class="exp-col">
+      <p>Les repas et les transports à l'École Élémentaire Internationale Robert Schuman sont gérés en coordination avec la Ville de Strasbourg.</p>
+      <p>Le déjeuner est considéré comme une activité périscolaire et les familles doivent s'inscrire et payer pour ce service. Bien qu'il n'y ait pas de bus scolaire, l'école est facilement accessible en transports en commun et à vélo.</p>
+      <p>Plus de détails ci-dessous:</p>
+    </div>
+        <aside class="quick-links">
+          <div class="quick-links-title">LIENS RAPIDES</div>
+          <a href="https://www.strasbourg.eu/menus-restauration-scolaire" class="quick-link" target="_blank" rel="noopener noreferrer">Menus de la cantine scolaire <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a href="https://www.strasbourg.eu/inscription-cantine" class="quick-link" target="_blank" rel="noopener noreferrer">Inscription à la cantine scolaire <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        </aside>
+      </div>
+      <ul class="faq-list">
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">1.</span> <span class="faq-text">Pourquoi la cantine compte-t-elle comme périscolaire?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <br><p>Dans les écoles publiques françaises, le temps de la pause méridienne est considéré comme périscolaire car il se déroule en dehors des heures de classe officielles et est géré par la municipalité, non par l'école. </p>
+            <p>Ce service est facultatif, encadré par du personnel non enseignant, et nécessite <strong><a href="https://www.strasbourg.eu/inscription-cantine" target="_blank">une inscription ainsi qu'une participation financière</a></strong> des familles.</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">2.</span> <span class="faq-text">Quel type de repas est servi à la cantine scolaire?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <br><p>La cantine, gérée par la Ville de Strasbourg, propose 4 types de repas:</p>
+            <br><ul class="info-ul">
+              <li><strong>Repas standard</strong></li>
+              <li><strong>Repas standard sans porc</strong></li>
+              <li><strong>Repas halal</strong></li>
+              <li><strong>Repas végétarien</strong></li>
+            </ul>
+            <br><p>Les menus sont planifiés à l'avance et peuvent être consultés sur le site officiel de la Ville de Strasbourg.</p>
+</div>
+        </li>
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">3.</span> <span class="faq-text">Puis-je donner un repas maison à mon enfant ?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <br><ul class="info-ul">
+              <li>L’École Élémentaire Internationale Robert Schuman n'autorise pas les élèves à apporter leur propre déjeuner.</li><br>
+              <li>Si votre enfant a des besoins ou des préférences alimentaires spécifiques, il est recommandé de contacter directement l'école pour discuter des éventuelles accommodations.</li><br>
+            </ul>
+</div>
+        </li>
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">4.</span> <span class="faq-text">Y a-t-il un bus scolaire ou faut-il gérer le transport?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <br><p>L'école ne propose pas de service de bus scolaire dédié. Les parents sont responsables de l'organisation du transport de leurs enfants.</p>
+            <br><p>Cependant, l'école est bien desservie par les transports en commun, facilitant ainsi les déplacements pour les familles, comme c'est le cas dans de nombreuses autres villes françaises.
+              <br>Les <strong>déplacements à vélo sont très populaires à Strasbourg</strong> et de nombreux arceaux pour vélos sont présents devant l'école.</p>
+</div>
+        </li>
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">5.</span> <span class="faq-text">Où puis-je déposer et récupérer mon enfant?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <br><ul class="info-ul">
+              <li>Les dépôts et récupérations se font aux entrées de l'école. Les parents doivent vérifier avec l'enseignant de leur enfant pour confirmer quelle entrée est applicable.</li><br>
+              <li>Il y a un petit parking public juste en face de l'école, mais les places sont limitées.</li><br>
+            </ul>
+</div>
+        </li>
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">6.</span> <span class="faq-text">Allergies et régimes alimentaires spécifiques</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <br><p>Pour les enfants ayant des allergies ou des besoins alimentaires médicaux spécifiques, les parents doivent établir un <strong>Projet d’Accueil Individualisé (PAI)</strong> avec la Ville de Strasbourg. Ce plan définit les aménagements nécessaires pour répondre aux besoins de santé de l'enfant.</p>
+            <br><ul class="info-ul">
+              <li>Dans certains cas, le <strong>PAI</strong> peut autoriser les familles à fournir un repas complet préparé à la maison pour leur enfant.</li>
+              <li>Pour organiser un PAI, contactez les services périscolaires de l'école à l'adresse suivante:<strong><a href="mailto:periscolaireeteducatif-robertschuman@strasbourg.eu">periscolaireeteducatif-robertschuman@strasbourg.eu</a></strong></li>
+            </ul>
+            <br><p>Pour plus d'informations sur les services de santé scolaire, consultez le site: <strong><a href="https://www.strasbourg.eu/sante-ecole" target="_blank" rel="noopener noreferrer">strasbourg.eu/sante-ecole</a></strong>.</p>
+</div>
+        </li>
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">7.</span> <span class="faq-text">Organisation des récupérations par d'autres adultes</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <br><p>Si une personne autre que le parent ou le tuteur légal doit récupérer votre enfant, vous devez fournir une autorisation écrite. Cela permet à l'école de garantir la sécurité de l'élève.</p>
+            <br><p>Veuillez informer à l'avance l'enseignant de votre enfant ou l'administration de l'école, en fournissant le nom complet et le lien de parenté de la personne autorisée.</p>
+</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div id="adaptation" class="expandable-section">
+    <div class="expandable-section-content">
+  <h2 class="section-header">Événements et activités scolaires, problèmes entre élèves, encouragement des amitiés, et plus encore</h2>
+  <div class="expandable-main-row">
+    <div class="exp-col">
+      <p>Les enfants de tous horizons sont accueillis dans un environnement scolaire inclusif et bienveillant. L'intégration est encouragée par des activités parascolaires et une collaboration entre les enseignants, les familles et l'équipe de santé scolaire.</p>
+      <p>Si votre enfant a du mal à s’adapter ou à se faire des amis, un soutien dédié est disponible pour l’aider à se sentir à l’aise.</p>
+      <p>Plus d'informations ci-dessous:</p>
+        </div>
+      </div>
+      <ul class="faq-list">
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">1.</span> <span class="faq-text">Comment puis-je aider mon enfant à se faire des amis?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <br><p>Favoriser les amitiés est essentiel à l’intégration et au bien-être de votre enfant. Voici quelques moyens de soutenir ce processus:</p>
+            <br><ul class="info-ul">
+              <li><strong>Encourager la participation à des activités périscolaires:</strong> Participer à des clubs ou à des activités sportives après l’école permet à votre enfant de rencontrer ses camarades dans un cadre détendu</li>
+              <br><li><strong>Favoriser les interactions sociales:</strong> Organiser des rencontres, des goûters ou des sorties en groupe en dehors de l’école pour permettre à votre enfant de créer des liens dans différents contextes.</li>
+              <br><li><strong>Communiquer avec les enseignants:</strong> Maintenez un dialogue ouvert avec les enseignants de votre enfant afin de rester informé(e) sur ses interactions sociales et de pouvoir réagir rapidement en cas de besoin.</li>
+              <br><li><strong>Être bienveillant(e) et patient(e):</strong> s'adapter à un nouvel environnement social prend du temps. Encouragez votre enfant et accompagnez-le avec patience dans ses nouvelles amitiés.</li>
+            </ul>
+</div>
+        </li>
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">2.</span> <span class="faq-text">Que faire si mon enfant a des difficultés avec ses camarades?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <br><p>Si votre enfant rencontre des problèmes avec d’autres élèves, vous pouvez envisager les démarches suivantes:</p>
+            <br><ul class="info-ul">
+              <li><strong>Prendre contact avec l’enseignant(e):</strong>Échangez avec l’enseignant(e) pour comprendre la situation. Il/elle pourra vous donner un aperçu des relations sociales de votre enfant et proposer des pistes pour améliorer son intégration.</li>
+              <br><li><strong>Faire appel à l’équipe de santé scolaire:</strong> L’école travaille avec des professionnels de santé qui accompagnent les équipes pédagogiques pour répondre aux besoins liés à la santé, y compris le bien-être psychologique.</li>
+              <br><li><strong>Encourager la participation à des activités sociales:</strong>  Incitez votre enfant à participer aux activités périscolaires proposées par l’école. Ces moments offrent des opportunités d’interagir dans des contextes variés, favorisant la création de liens et le développement des compétences sociales.</li>
+            </ul>
+</div>
+        </li>
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">3.</span> <span class="faq-text">Existe-t-il des occasions pour les parents de se rencontrer?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <br><p>L’école encourage la participation des parents et propose plusieurs moyens de s’impliquer dans la vie scolaire:</p>
+            <br><ul class="info-ul">
+              <li><strong>Réunions parents-professeurs:</strong> Organisées en début d’année scolaire, elles permettent de rencontrer les enseignants et d’échanger avec d’autres parents.</li>
+              <br><li><strong>Événements et activités scolaires:</strong>  L’école organise des événements comme des journées culturelles, des ateliers, etc., où les parents peuvent participer et rencontrer d’autres familles.</li>
+              <br><li><strong>FCPE</strong>:  La branche locale de la Fédération des Conseils de Parents d'Élèves est active dans l’accompagnement des familles et des élèves. Elle facilite la communication entre les parents et l’école, défend les droits des élèves, et organise divers événements.</li>
+            </ul>
+</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div id="health" class="expandable-section">
+    <div class="expandable-section-content">
+  <h2 class="section-header">Gestion des maladies chroniques et des allergies, PAI, situations d'urgence</h2>
+  <div class="expandable-main-row">
+    <div class="exp-col">
+    <p>L'école accorde une grande importance à la santé et à la sécurité de votre enfant tout au long de la journée. Le personnel est formé pour intervenir rapidement en cas de maladie ou de blessure, qu'elle soit légère ou grave. Les familles sont encouragées à signaler tout problème médical à l'avance afin que des soins adaptés puissent être mis en place.</p>
+    <p>Voir ci-dessous pour plus d’informations sur les procédures et les contacts d’urgence :</p>
+      </div>
+      <aside class="quick-links">
+        <div class="quick-links-title">LIENS RAPIDES</div>
+        <a href="mailto:periscolaireeteducatif-robertschuman@strasbourg.eu" class="quick-link">Email pour organiser un PAI <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a href="https://www.strasbourg.eu/sante-ecole" target="_blank" rel="noopener noreferrer" class="quick-link">Services de santé scolaire <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </aside>
+  </div>
+  <ul class="faq-list">
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">1.</span> <span class="faq-text">Que fait l’école si mon enfant est malade ou se blesse?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <br><p>Si votre enfant tombe malade ou se blesse pendant les heures de classe, le personnel prendra immédiatement les mesures appropriées.</p>
+            <ul class="info-ul">
+              <br><li><strong>Petits maux ou blessures légères:</strong> Pour des problèmes mineurs, comme un léger mal de tête ou une éraflure, le personnel scolaire administrera les premiers soins de base et surveillera l’état de votre enfant.</li>
+              <br><li><strong>Maladies ou blessures plus graves:</strong> En cas de problème de santé plus sérieux, l’école vous contactera immédiatement à l’aide des coordonnées d’urgence que vous avez fournies. Si nécessaire, les services médicaux d’urgence seront également appelés pour assurer une prise en charge rapide.</li>
+            </ul>
+            <br><p>Il est essentiel de tenir l’école informée de toute condition médicale de votre enfant et de vérifier que ses coordonnées d’urgence sont à jour.</p>
+  </div>
+        </li>
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">2.</span> <span class="faq-text">Comment informer l’école des besoins médicaux de mon enfant?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <ul class="info-ul">
+              <br><li>Si votre enfant souffre <strong>d’une maladie chronique, d’allergies, ou nécessite une prise de médicament pendant le temps scolaire</strong>, vous devez mettre en place un Projet d’Accueil Individualisé (PAI).</li>
+              <br><li>Pour cela, contactez l’école et fournissez un certificat médical de votre médecin. Le <strong>PAI</strong> est élaboré en collaboration avec la famille, l’équipe éducative et le personnel de santé scolaire. Il précise les mesures à prendre : prise de médicament, restrictions alimentaires, adaptation des activités, etc.</li>
+            </ul>
+  </div>
+        </li>
+        <li class="faq-item">
+          <button type="button" class="faq-question"><div class="faq-left"><span class="faq-num">3.</span> <span class="faq-text">Qui contacter en cas d’urgence?</span></div> <span class="faq-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12L12 19L5 12" stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer">
+            <br><p>En cas d’urgence concernant votre enfant pendant les heures scolaires à l’École Élémentaire Internationale Robert Schuman à Strasbourg, veuillez contacter directement l’administration de l’école:</p>
+            <ul class="info-ul">
+              <br><li>Téléphone: <strong>03 88 60 73 65</strong></li>
+              <br><li>Email: <strong><a href="mailto:ce.0672269c@ac-strasbourg.fr">ce.0672269c@ac-strasbourg.fr</a></strong></li>
+            </ul>
+</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <!-- Parent Message and Map Section -->
+  <section class="message-map">
+    <div class="message">
+        <h3>Des parents actuels aux nouveaux parents: pourquoi nous avons créé cette page</h3>
+        <p>Naviguer dans le système scolaire en tant que nouveau parent peut être difficile, surtout lorsqu’il y a un manque d’informations claires et accessibles.<br><br>
+          Le site Web de l’école ne fournit pas toujours les détails clés, les mises à jour régulières ou les procédures claires, ce qui rend difficile pour les parents de trouver des informations de contact ou d’obtenir des réponses.<br><br>        
+          Les parents occupés ont souvent recours à de multiples courriels, appels téléphoniques ou visites en personne, ce qui ajoute du stress aux familles et au personnel scolaire.<br><br>        
+          De plus, le système scolaire public français n’autorise pas les visites ni le partage d’informations détaillées avant l’admission, ce qui rend la transition encore plus difficile.<br><br>        
+          Cette page Web a été créée pour combler ces lacunes, en offrant une ressource centralisée et conviviale pour aider les nouveaux parents à se sentir informés, soutenus et connectés.
+        </p>
+    </div>
+    <div class="map">
+        <!-- Embed Google Maps -->
+        <iframe title="Localisation de l'Ecole Internationale Robert Schuman" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3523.368692407415!2d7.766865649062646!3d48.58028026253036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c8e3a8dc7c31%3A0x40e6b6efaf4e85b4!2sSchool%20International%20Robert-Schuman!5e0!3m2!1sen!2sfr!4v1742825909951!5m2!1sen!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  </section>
+
+  <!-- Footer Section -->
+   <section class="upper-footer">
+        <div class="contact">
+            <img class="school_picture" src="../assets/pic_of_school_for_footer.png" alt="Photo de l'école">
+            <div class="contact-info">
+                <h5>École Élémentaire<br>Internationale Robert-Schuman</h5>
+                <p>Directrice: Mme Celia Masquera</p>
+                <p>Email: <a href="mailto:ce.0672269c@ac-strasbourg.fr" style="text-decoration: none; color: #1e1e1e;">ce.0672269c@ac-strasbourg.fr</a></p>
+                <p>Téléphone: 03 88 30 73 65</p>
+                <p>Adresse: 10, rue Vauban, 67000 Strasbourg</p>
+                <p>Langues enseignées:<br>
+                English - Italian - Spanish - German</p>
+            </div>
+        </div>
+        <div class="logos-school-website">
+            <div class="logos">
+                <img class="fcpe" src="../assets/FCPE logo 1.svg" alt="FCPE logo">
+            </div>
+            <a class="school-website" href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/" target="_blank" rel="noopener noreferrer">visitez le site officiel de l'école</a>
+        </div>
+        <div class="links">
+            <h5>Liens rapides</h5>
+            <div class="links-list">
+         <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank" rel="noopener noreferrer">Visiter</a>
+         <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/notre-ecole/admission/" target="_blank" rel="noopener noreferrer">Postuler</a>
+         <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank" rel="noopener noreferrer">Contacter</a>
+         <a href="https://www.fcpe.asso.fr/" target="_blank" rel="noopener noreferrer">Infos FCPE</a>  
+            </div>
+        </div>
+    
+    </section>
+    <button type="button" id="to-top-btn" aria-label="Scroll to top">
+      <span class="to-top-arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 15.8337V4.16699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.16797 10.0003L10.0013 4.16699L15.8346 10.0003" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="to-top-text">Haut</span>
+    </button>
+  <footer>Ce site est conçu pour les parents de l’école Robert Schuman à Strasbourg par I. Rusiaieva, K. Paroci et Y. Bulatov. | Conditions d’utilisation | Politique de confidentialité | © 2025</footer>
+  </div>
+</div>  
+<script>
+    function setElementWidth(element, columnsSpanned, incrementGutter = false) {
+      // Get CSS variables
+      const designWidth = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--design-width'));
+      const columns = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--columns'));
+      const gutter = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gutter'));
+      const margin = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--margin'));
+  
+      // Calculate available width
+      const availableWidth = designWidth - (2 * margin) - ((columns - 1) * gutter);
+      const columnWidth = availableWidth / columns;
+  
+      // Calculate element width based on columns spanned
+      let elementWidth = (columnWidth * columnsSpanned) + ((columnsSpanned - 1) * gutter);
+
+      // Optionally add gutter width if incrementGutter is true
+      if (incrementGutter) {
+        elementWidth += gutter; // Add one more gutter width if incrementGutter is true
+  }
+
+      // Adjust for viewport size using the design width ratio
+      const finalWidth = (elementWidth * window.innerWidth) / designWidth;
+      
+      // Set the element's width dynamically
+      element.style.width = finalWidth + 'px';
+    }
+
+    function isMobile() {
+      return window.matchMedia("(max-width: 900px)").matches; 
+    }
+    
+  
+    // Example: Set the width of elements dynamically
+    document.addEventListener('DOMContentLoaded', function() {
+      // FAQ accordion logic
+      document.querySelectorAll('.faq-list').forEach(faqList => {
+        // Initialise all faq-questions with aria-expanded="false"
+        faqList.querySelectorAll('.faq-question').forEach(btn => {
+        btn.setAttribute('aria-expanded', 'false');
+        });
+        // Initialise all answers as hidden
+        faqList.querySelectorAll('.faq-answer').forEach(ans => {
+          ans.setAttribute('aria-hidden', 'true');
+          ans.setAttribute('role', 'region');
+          if (!ans.id) ans.id = 'faq-answer-' + Math.random().toString(36).slice(2, 11);
+          const qBtn = ans.closest('.faq-item')?.querySelector('.faq-question');
+          if (qBtn) qBtn.setAttribute('aria-controls', ans.id);
+        });
+        faqList.querySelectorAll('.faq-question').forEach(btn => {
+          btn.addEventListener('click', function() {
+            const item = btn.closest('.faq-item');
+            const answer = item.querySelector('.faq-answer');
+            const isOpen = item.classList.contains('open');
+            // ensure IDs for aria-controls
+            if (!answer.id) {
+              answer.id = 'faq-answer-' + Math.random().toString(36).slice(2, 11);
+              btn.setAttribute('aria-controls', answer.id);
+              answer.setAttribute('role', 'region');
+              answer.setAttribute('aria-hidden', 'true');
+            }
+            // Close all
+            faqList.querySelectorAll('.faq-item').forEach(i => {
+              i.classList.remove('open');
+              const ans = i.querySelector('.faq-answer');
+              if (ans) ans.setAttribute('aria-hidden', 'true');
+              const qBtn = i.querySelector('.faq-question');
+              if (qBtn) qBtn.setAttribute('aria-expanded', 'false');
+            });
+            // Open this one if it wasn't open
+            if (!isOpen) {
+              item.classList.add('open');
+              btn.setAttribute('aria-expanded', 'true');
+              answer.setAttribute('aria-hidden', 'false');
+            } else {
+              btn.setAttribute('aria-expanded', 'false');
+              answer.setAttribute('aria-hidden', 'true');
+            }
+          });
+        });
+      });
+      // Set the widths for each element dynamically
+      const hero = document.querySelector('.hero');
+
+      // To Top button functionality
+      const toTopBtn = document.getElementById('to-top-btn');
+      if (toTopBtn) {
+        toTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Remove focus/active states after click
+        toTopBtn.blur();
+        });
+      }
+      function applyDesktopWidths() {
+        if (window.innerWidth <= 900) return;
+        const hero = document.querySelector('.hero');
+        hero && setElementWidth(hero, 4);
+        const message = document.querySelector('.message');
+        message && setElementWidth(message, 5);
+        const map = document.querySelector('.map');
+        map && setElementWidth(map, 6, true);
+        const contact = document.querySelector('.contact');
+        contact && setElementWidth(contact, 3);
+        const school = document.querySelector('.school-website');
+        school && setElementWidth(school, 3);
+        const links = document.querySelector('.links');
+        links && setElementWidth(links, 1, true);
+      }
+      applyDesktopWidths();
+      window.addEventListener('resize', applyDesktopWidths);
+
+      // Attach all card button event listeners
+document.querySelectorAll('.card').forEach((card) => {
+  // Click on card (except button) triggers button click
+  card.addEventListener('click', function(e) {
+    if (e.target.tagName === 'BUTTON') return;
+    const btn = card.querySelector('button');
+    if (btn) btn.click();
+  });
+  // Keyboard accessibility
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('role', 'button');
+  card.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      const btn = card.querySelector('button');
+      if (btn) btn.click();
+    }
+  });
+});
+
+document.querySelectorAll('.card button').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.card');
+    const targetId = card && card.getAttribute('data-target');
+    const targetSection = document.getElementById(targetId);
+
+    // Move target section just after the clicked card (on mobile only)
+    if (isMobile() && targetSection) {
+      card.insertAdjacentElement('afterend', targetSection);
+    }
+
+    // Get computed background color from parent
+    const backgroundColor = window.getComputedStyle(card).backgroundColor;
+
+    // Close other sections
+    document.querySelectorAll('.expandable-section').forEach((section) => {
+      if (section !== targetSection) {
+        section.classList.remove('open');
+        section.style.maxHeight = null;
+        section.style.padding = '0';
+        section.style.backgroundColor = '';
+      }
+    });
+
+    // Remove shadow from all cards
+    document.querySelectorAll('.card').forEach((c) => {
+      c.style.boxShadow = 'none';
+    });
+
+    // Toggle target section and hide-button class
+    if (targetSection.classList.contains('open')) {
+      targetSection.classList.remove('open');
+      targetSection.style.maxHeight = null;
+      targetSection.style.padding = '0';
+      targetSection.style.backgroundColor = '';
+      card.classList.remove('hide-button', 'expanded');
+    } else {
+      targetSection.classList.add('open');
+      targetSection.style.backgroundColor = backgroundColor;
+      if (isMobile() && !window._suppressAutoScroll) {
+        setTimeout(() => {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 80);
+      }
+      window._suppressAutoScroll = false;
+
+      // Reset other cards
+      document.querySelectorAll('.card').forEach((c) => {
+        c.classList.remove('hide-button', 'expanded');
+        c.style.boxShadow = 'none';
+      });
+
+      // Highlight clicked card
+      card.classList.add('hide-button', 'expanded');
+
+      // Dim other cards
+      document.querySelectorAll('.card').forEach((c) => {
+        if (c !== card) {
+          c.style.boxShadow = '0px 8px 8px rgba(0, 0, 0, 0.4)';
+        }
+      });
+    }
+  });
+});
+
+      window._suppressAutoScroll = true;
+
+      // Simulate click on the first Read More button after all listeners
+      const firstReadMore = document.querySelector('.card button');
+      if (firstReadMore) firstReadMore.click();
+    });
+  </script>
+
+
+
+<script>
+// Burger menu toggle for mobile only
+function handleBurgerMenuDisplay() {
+  const burger = document.querySelector('.burger-menu');
+  const nav = document.querySelector('nav');
+  const mobileNav = document.querySelector('.mobile-nav');
+  if (window.innerWidth <= 900) {
+    burger.style.display = 'flex';
+    nav.style.display = 'none';
+  } else {
+    burger.style.display = 'none';
+    nav.style.display = '';
+    if (mobileNav) mobileNav.style.display = 'none';
+  }
+}
+window.addEventListener('resize', handleBurgerMenuDisplay);
+document.addEventListener('DOMContentLoaded', function() {
+  handleBurgerMenuDisplay();
+  const burger = document.querySelector('.burger-menu');
+  const mobileNav = document.querySelector('.mobile-nav');
+  const mobileNavClose = document.querySelector('.mobile-nav-close');
+    if (burger && mobileNav) {
+    burger.setAttribute('aria-controls', 'mobile-nav');
+    burger.setAttribute('aria-expanded', 'false');
+    burger.addEventListener('click', function() {
+      const willOpen = mobileNav.style.display !== 'flex';
+      mobileNav.style.display = willOpen ? 'flex' : 'none';
+      burger.setAttribute('aria-expanded', String(willOpen));
+      document.body.classList.toggle('menu-open', willOpen);
+    });
+  }
+  if (mobileNav && mobileNavClose) {
+    mobileNavClose.addEventListener('click', function() {
+      mobileNav.style.display = 'none';
+      document.body.classList.remove('menu-open');
+      burger && burger.setAttribute('aria-expanded', 'false');
+    });
+  }
+    // Close menu on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobileNav && mobileNav.style.display === 'flex') {
+      mobileNav.style.display = 'none';
+      document.body.classList.remove('menu-open');
+      burger && burger.setAttribute('aria-expanded', 'false');
+    }
+  });
+  if (mobileNav) {
+    mobileNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileNav.style.display = 'none';
+        document.body.classList.remove('menu-open');
+        burger && burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+  // Language switch redirects
+  const enBtn = document.getElementById('en');
+  const frBtn = document.getElementById('fr');
+  if (enBtn) enBtn.addEventListener('click', function() { window.location.replace('/en/index.html'); });
+  if (frBtn) frBtn.addEventListener('click', function() { window.location.replace('/fr/index.html'); });
+  // Language toggle: Only show EN on mobile
+  function handleLanguageToggle() {
+    const enBtn = document.getElementById('en');
+    const frBtn = document.getElementById('fr');
+    if (window.innerWidth <= 900) {
+      if (enBtn) enBtn.classList.add('active');
+      if (frBtn) frBtn.style.display = 'none';
+    } else {
+      if (enBtn) enBtn.classList.remove('active');
+      if (frBtn) frBtn.style.display = '';
+    }
+  }
+  handleLanguageToggle();
+  window.addEventListener('resize', handleLanguageToggle);
+   // Restore expandable sections under their container on desktop
+  function restoreSectionsOnDesktop() {
+    if (window.innerWidth > 900) {
+      const container = document.querySelector('.expandable-content');
+      if (!container) return;
+      // Preserve intended order based on the cards sequence
+      document.querySelectorAll('.card').forEach(card => {
+        const targetId = card.getAttribute('data-target');
+        const section = targetId && document.getElementById(targetId);
+        if (section && section.parentElement !== container) {
+          container.appendChild(section);
+        }
+      });
+    }
+  }
+  window.addEventListener('resize', restoreSectionsOnDesktop);
+  restoreSectionsOnDesktop();
+});
+</script>
+</body>
+</html>
