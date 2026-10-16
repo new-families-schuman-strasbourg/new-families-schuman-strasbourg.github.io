@@ -25,7 +25,7 @@
   .school-logo { height: 32px; }
   .main-wrapper {
   max-width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   background: #fbfbfb;
   margin-left: auto;
   margin-right: auto;
@@ -119,8 +119,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     background: #ffffff;
     z-index: 2000;
     padding: 0px 16px 200px 16px; /* extra top padding for logo & close */
@@ -307,6 +307,7 @@ body.menu-open {
     box-shadow .2s ease,
     gap .2s ease,
     height .3s ease;
+    cursor: pointer;
 }
 
 .card:hover .card-content img, .card:focus-visible .card-content img {
@@ -320,6 +321,12 @@ body.menu-open {
 
 .card button, .card .read-more {
     transition: font-size 0.2s;
+}
+
+/* Enlarge button text when the parent card is hovered */
+.card:hover button,
+.card:hover .read-more {
+  font-size: 20px;
 }
 
 
@@ -582,6 +589,12 @@ body.menu-open {
   outline-offset: 2px;
 }
 
+/* Ensure the inner text of the question turns white when hovered or focused */
+.faq-question:hover .faq-left,
+.faq-question:focus-visible .faq-left {
+  color: #fff;
+}
+
 
 .faq-question {
     font-weight: 400;
@@ -631,6 +644,24 @@ body.menu-open {
   opacity: 1;
   padding: 0px 36px 24px 36px;
   transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.3s, padding 0.3s;
+}
+
+/* Mobile: remove margins from paragraphs inside FAQ answers for tighter layout */
+@media (max-width: 900px) {
+  .faq-answer p {
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+  .faq-answer li{
+    text-align: justify;
+  }
+  /* Make explicit spacing for <br> inside faq answers on mobile */
+  .faq-answer br {
+    display: block;
+    height: 10px;
+    line-height: 10px;
+  }
 }
 
 /* List styling in content blocks */
@@ -697,6 +728,7 @@ body.menu-open {
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
+    gap: 25px;
 
   }
 
@@ -705,6 +737,10 @@ body.menu-open {
     flex-direction: column;
     justify-content: space-between;
     color: #000000;
+  }
+
+  .message p{
+    text-align: justify;
   }
   
   /* Map */
@@ -874,14 +910,22 @@ body.menu-open {
 
   footer {
     background: #010A26;
-    color: #FBFBFB;
-    font-weight: 400;
-    font-size: 0.875rem;
     display:flex;
     justify-content: center;
     align-items: center;
     height: 62px;
+  }
+
+  footer p {
+    color: #FBFBFB;
+    font-weight: 400;
+    font-size: 0.875rem; 
     line-height: 150%;
+  }
+
+  footer a {
+    color: #FBFBFB;
+    text-decoration: none;
   }
 
   h5 {
@@ -890,6 +934,154 @@ body.menu-open {
     text-align: left;
   }
   
+  .terms-section {
+    margin-left: calc(var(--column-width) + 2 * var(--gutter));
+    margin-top: 86px;
+    display: flex;
+    flex-direction: column;
+    max-width: 555px;
+  }
+  .terms-section h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #1E1E1E;
+  }
+
+  .terms-section h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -0.03em;
+    color: #000000;
+  }
+
+  .terms-section p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    color: #1E1E1E;
+  }
+
+  .terms-section b{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    color: #1E1E1E;
+  }
+
+    /* Visit Popup Styles */
+  .visit-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fbfbfb;
+    display: none;
+    z-index: 2000;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .visit-popup.active {
+    display: block;
+  }
+
+  .visit-popup-content {
+    max-width: 438px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popup-close {
+    align-self: flex-end;
+    width: 46px;
+    height: 46px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .popup-close img {
+    width: 46px;
+    height: 46px;
+    display: block;
+  }
+
+  .popup-section {
+    margin-bottom: 32px;
+  }
+
+  .popup-section p {
+    color: #000000; 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: -0.03em;
+    position: relative;
+    top: 50px;
+  }
+    .popup-section b{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.03em;  
+    color: #000000;
+  }
+
+  @media (max-width: 900px) {
+    .visit-popup-content {
+      max-width: 335px;
+      padding: 30px 16px;
+    }
+    
+    .popup-section h2 {
+      font-size: 1.25rem;
+    }
+    
+   .popup-section p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    color: #000000;
+  }
+      .popup-section b{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.03em;  
+    color: #000000;
+  }
+  }
+
 
   @media (max-width: 900px) {
   body {
@@ -916,7 +1108,7 @@ body.menu-open {
     width: 100%;
     max-width: 375px;
     min-width: 0;
-    background: #f8f6f4;
+    background: #fbfbfb;
     margin: 0 auto;
   }
 
@@ -999,11 +1191,15 @@ body.menu-open {
     font-weight: 400;
     }
 
-  .language-toggle button {
-    display: none;
-  }
 
   #en{
+    background-color: #f27405;
+    color: #fff;
+    font-size: 16px;
+    font-weight:500;
+    opacity: 100%;
+  }
+  #fr{
     background-color: #f27405;
     color: #fff;
     font-size: 16px;
@@ -1015,7 +1211,7 @@ body.menu-open {
     flex-direction: column;
     align-self: center;
     font-size: 16px;
-    margin-left: auto;
+    margin-left: 0;
     padding: 0.4em 1em;
     background: #F27405;
     font-weight: 500;
@@ -1148,7 +1344,7 @@ body.menu-open {
     align-self: center;
   }
   .faq-item.open .faq-answer{
-    padding: 0px 15px 0px 15px;
+    padding: 40px 15px 0px 15px;
   }
 
   .faq-answer p{
@@ -1191,7 +1387,6 @@ body.menu-open {
   html[lang='en'] .message{
     order:2;
     position: relative;
-    bottom: 280px
   }
   html[lang='fr'] .message{
     order:2;
@@ -1208,11 +1403,11 @@ body.menu-open {
     flex-direction: column;
     align-items: flex-start;
     margin: var(--mobile-margin);
-    margin-top: -220px;
     gap: 30px;
     position: relative;
     z-index: 3;
     background: #fbfbfb;
+    max-width: 335px;
   }
   .logos-school-website{
     flex-direction: column-reverse;
@@ -1225,11 +1420,61 @@ body.menu-open {
 
 
   footer{
+    height: 98px;
+  }
+  footer p{
     font-size: 12px;
-    padding: 20px;
+    padding: 19px;
     text-align: center;
   }
+  .terms-section{
+  margin: var(--mobile-margin);
+  max-width: 335px;
 }
+
+  .terms-section h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    
+    letter-spacing: -0.03em;
+    color: #000000;
+  }
+
+  .terms-section h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -0.03em;
+    color: #000000;
+  }
+
+  .terms-section p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    color: #000000;
+  }
+
+  .terms-section b{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.03em;  
+    color: #000000;
+  }
+}
+
+
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }

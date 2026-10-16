@@ -20,7 +20,7 @@
     <img class="school-logo" src="../assets/Ecole_Internationale_Robert_Schuman.svg" alt="École Internationale Robert Schuman" />
   </a>
   <nav>
-    <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank" rel="noopener noreferrer">Visit</a>
+    <a href="#" data-visit-trigger id="visit-link" rel="noopener noreferrer">Visit</a>
     <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/notre-ecole/admission/" target="_blank" rel="noopener noreferrer">Apply</a>
     <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank" rel="noopener noreferrer">Contact</a>
   </nav>
@@ -34,7 +34,7 @@
       </button>
       <div class="language-toggle">
   <button class="language active" id="en" type="button">EN</button>
-  <button class="language" id="fr" type="button">FR</button>
+  <button class="language active" id="fr" type="button">FR</button>
       </div>
     </div>
     <div class="mobile-nav" id="mobile-nav">
@@ -44,16 +44,32 @@
   <button class="mobile-nav-close" aria-label="Close menu" type="button">
         <img src="../assets/X close menu.svg" alt="Close" />
       </button>
-      <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank" rel="noopener noreferrer">Visit</a>
+      <a href="#" data-visit-trigger id="visit-link-mobile" rel="noopener noreferrer">Visit</a>
       <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/notre-ecole/admission/" target="_blank" rel="noopener noreferrer">Apply</a>
       <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank" rel="noopener noreferrer">Contact</a>
     </div>
+        <!-- Visit Popup -->
+    <div id="visitPopup" class="visit-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title" tabindex="-1">
+      <div class="visit-popup-content">
+        <button class="popup-close" aria-label="Close pop-up" id="popupClose">
+          <img src="../assets/X close menu.svg" alt="Close" />
+        </button>
+        <section class="popup-section">
+          <p>In line with <b>general practice in French public elementary schools, access to the  École Internationale Robert Schuman</b> is restricted during class hours, and casual visits are not possible, in order to ensure children’s safety and a calm learning environment. <br><br>
+          Tours for families are not offered, and teachers and the director are unavailable for individual visits during the school day, as staff focus on teaching.<br><br>
+          There are <b>no “Meet the Teacher Day” events</b> before the school year starts; children usually meet their class and teacher for the first time on the first day of school.<br><br>
+          If you need to meet with staff or discuss matters related to your child,<b> appointments must be arranged in advance </b>with the school office.<br><br>
+          All parents are required to <b>use designated entrances and check in with supervising staff</b>, in accordance with school safety rules.</p>
+        </section>
+      </div>
+    </div>
+
 </div>
 
     <div class="lower-header">
         <div class="hero">
             <h1>Welcome, <br>New Families!</h1>
-            <p>Congrats, your child is accepted at the École Élémentaire Internationale Robert-Schuman!</p>
+            <p>Congrats, your child is accepted at the École Élémentaire Internationale Robert Schuman!</p>
             <br>
             <p>All important info about school you can find below, in one place, carefully picked up for you by other parents</p>
 
@@ -123,7 +139,7 @@
         </div>
         <aside class="quick-links">
           <div class="quick-links-title">QUICK LINKS</div>
-          <a href="https://www.strasbourg.eu/inscription-cantine" target="_blank" rel="noopener noreferrer" class="quick-link">School canteen services <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a href="https://www.strasbourg.eu/inscription-reservation-cantine-foire-questions" target="_blank" rel="noopener noreferrer" class="quick-link">School canteen services <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
           <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/periscolaire-2/" target="_blank" rel="noopener noreferrer" class="quick-link">After-school care <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
         </aside>
         <ul class="mobile-only">
@@ -277,7 +293,7 @@
         <aside class="quick-links">
           <div class="quick-links-title">QUICK LINKS</div>
           <a href="https://www.strasbourg.eu/menus-restauration-scolaire" class="quick-link" rel="noopener noreferrer" target="_blank">School canteen menus <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-          <a href="https://www.strasbourg.eu/inscription-cantine" class="quick-link" target="_blank" rel="noopener noreferrer">School canteen registration <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a href="https://www.strasbourg.eu/inscription-enfant" class="quick-link" target="_blank" rel="noopener noreferrer">School canteen registration <span class="quick-link-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
         </aside>
       </div>
       <ul class="faq-list">
@@ -469,7 +485,7 @@
         <div class="contact">
             <img class="school_picture" src="../assets/pic_of_school_for_footer.png" alt="Picture of the school">
             <div class="contact-info">
-                <h5>École Élémentaire<br>Internationale Robert-Schuman</h5>
+                <h5>École Élémentaire<br>Internationale Robert Schuman</h5>
                 <p>Principal: Ms. Celia Masquera</p>
                 <p>Email: <a href="mailto:ce.0672269c@ac-strasbourg.fr" style="text-decoration: none; color: #1e1e1e;">ce.0672269c@ac-strasbourg.fr</a></p>
                 <p>Phone: 03 88 30 73 65</p>
@@ -487,7 +503,7 @@
         <div class="links">
             <h5>Quick Links</h5>
             <div class="links-list">
-          <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank" rel="noopener noreferrer">Visit</a>
+          <a href="#" data-visit-trigger id="visit-link" rel="noopener noreferrer">Visit</a>
           <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/notre-ecole/admission/" target="_blank" rel="noopener noreferrer">Apply</a>
           <a href="https://ec-internationale-schuman-strasbourg.site.ac-strasbourg.fr/comptes-rendus-des-conseils-decole/" target="_blank" rel="noopener noreferrer">Contact</a>
           <a href="https://www.fcpe.asso.fr/" target="_blank" rel="noopener noreferrer">About FCPE</a>  
@@ -499,315 +515,9 @@
       <span class="to-top-arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 15.8337V4.16699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.16797 10.0003L10.0013 4.16699L15.8346 10.0003" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       <span class="to-top-text">To top</span>
     </button>
-  <footer>This site is created for parents of the Robert Schuman school in Strasbourg by I. Rusiaieva, K. Paroci, and Y. Bulatov | Terms of Use | Privacy Policy | &copy; 2025 </footer>
+  <footer><p>This site is created for parents of the Robert Schuman school in Strasbourg by I. Rusiaieva, K. Paroci, and Y. Bulatov. | <a href="terms.html" target="_self" rel="noopener noreferrer"> Terms of Use </a> | <a href="privacy.html" target="_self" rel="noopener noreferrer"> Privacy Policy </a> | &copy; 2025 </p></footer>
   </div>
 </div>
-  <script>
-    function setElementWidth(element, columnsSpanned, incrementGutter = false) {
-      // Get CSS variables
-      const designWidth = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--design-width'));
-      const columns = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--columns'));
-      const gutter = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gutter'));
-      const margin = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--margin'));
-  
-      // Calculate available width
-      const availableWidth = designWidth - (2 * margin) - ((columns - 1) * gutter);
-      const columnWidth = availableWidth / columns;
-  
-      // Calculate element width based on columns spanned
-      let elementWidth = (columnWidth * columnsSpanned) + ((columnsSpanned - 1) * gutter);
-
-      // Optionally add gutter width if incrementGutter is true
-      if (incrementGutter) {
-        elementWidth += gutter; // Add one more gutter width if incrementGutter is true
-  }
-
-      // Adjust for viewport size using the design width ratio
-      const finalWidth = (elementWidth * window.innerWidth) / designWidth;
-      
-      // Set the element's width dynamically
-      element.style.width = finalWidth + 'px';
-    }
-
-    function isMobile() {
-      return window.matchMedia("(max-width: 900px)").matches; 
-    }
-    
-  
-// Example: Set the width of elements dynamically
-    document.addEventListener('DOMContentLoaded', function() {
-
-      // FAQ accordion logic
-      document.querySelectorAll('.faq-list').forEach(faqList => {
-        // Initialise all faq-questions with aria-expanded="false"
-        faqList.querySelectorAll('.faq-question').forEach(btn => {
-        btn.setAttribute('aria-expanded', 'false');
-        });
-        // Initialise all answers as hidden
-        faqList.querySelectorAll('.faq-answer').forEach(ans => {
-          ans.setAttribute('aria-hidden', 'true');
-          ans.setAttribute('role', 'region');
-          if (!ans.id) ans.id = 'faq-answer-' + Math.random().toString(36).slice(2, 11);
-          const qBtn = ans.closest('.faq-item')?.querySelector('.faq-question');
-          if (qBtn) qBtn.setAttribute('aria-controls', ans.id);
-        });
-        faqList.querySelectorAll('.faq-question').forEach(btn => {
-          btn.addEventListener('click', function() {
-            const item = btn.closest('.faq-item');
-            const answer = item.querySelector('.faq-answer');
-            const isOpen = item.classList.contains('open');
-            // ensure IDs for aria-controls
-            if (!answer.id) {
-              answer.id = 'faq-answer-' + Math.random().toString(36).slice(2, 11);
-              btn.setAttribute('aria-controls', answer.id);
-              answer.setAttribute('role', 'region');
-              answer.setAttribute('aria-hidden', 'true');
-            }
-            // Close all
-            faqList.querySelectorAll('.faq-item').forEach(i => {
-              i.classList.remove('open');
-              const ans = i.querySelector('.faq-answer');
-              if (ans) ans.setAttribute('aria-hidden', 'true');
-              const qBtn = i.querySelector('.faq-question');
-              if (qBtn) qBtn.setAttribute('aria-expanded', 'false');
-            });
-            // Open this one if it wasn't open
-            if (!isOpen) {
-              item.classList.add('open');
-              btn.setAttribute('aria-expanded', 'true');
-              answer.setAttribute('aria-hidden', 'false');
-            } else {
-              btn.setAttribute('aria-expanded', 'false');
-              answer.setAttribute('aria-hidden', 'true');
-            }
-          });
-        });
-      });
-      // Set the widths for each element dynamically
-      const hero = document.querySelector('.hero');
-
-      // To Top button functionality
-      const toTopBtn = document.getElementById('to-top-btn');
-      if (toTopBtn) {
-        toTopBtn.addEventListener('click', () => {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        // Remove focus/active states after click
-        toTopBtn.blur();
-        });
-      }
-      function applyDesktopWidths() {
-        if (window.innerWidth <= 900) return;
-        const hero = document.querySelector('.hero');
-        hero && setElementWidth(hero, 4);
-        const message = document.querySelector('.message');
-        message && setElementWidth(message, 5);
-        const map = document.querySelector('.map');
-        map && setElementWidth(map, 6, true);
-        const contact = document.querySelector('.contact');
-        contact && setElementWidth(contact, 3);
-        const school = document.querySelector('.school-website');
-        school && setElementWidth(school, 3);
-        const links = document.querySelector('.links');
-        links && setElementWidth(links, 1, true);
-      }
-      applyDesktopWidths();
-      window.addEventListener('resize', applyDesktopWidths); 
-
-      // Attach all card button event listeners
-document.querySelectorAll('.card').forEach((card) => {
-  // Click on card (except button) triggers button click
-  card.addEventListener('click', function(e) {
-    if (e.target.tagName === 'BUTTON') return;
-    const btn = card.querySelector('button');
-    if (btn) btn.click();
-  });
-  // Keyboard accessibility
-  card.setAttribute('tabindex', '0');
-  card.setAttribute('role', 'button');
-  card.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      const btn = card.querySelector('button');
-      if (btn) btn.click();
-    }
-  });
-});
-
-document.querySelectorAll('.card button').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const card = btn.closest('.card');
-    const targetId = card.getAttribute('data-target');
-    const targetSection = document.getElementById(targetId);
-
-    // Move target section just after the clicked card (on mobile only)
-    if (isMobile() && targetSection) {
-      card.insertAdjacentElement('afterend', targetSection);
-    }
-
-    // Get computed background color from parent
-    const backgroundColor = window.getComputedStyle(card).backgroundColor;
-
-    // Close other sections
-    document.querySelectorAll('.expandable-section').forEach((section) => {
-      if (section !== targetSection) {
-        section.classList.remove('open');
-        section.style.maxHeight = null;
-        section.style.padding = '0';
-        section.style.backgroundColor = '';
-      }
-    });
-
-    // Remove shadow from all cards
-    document.querySelectorAll('.card').forEach((c) => {
-      c.style.boxShadow = 'none';
-    });
-
-    // Toggle target section and hide-button class
-    if (targetSection.classList.contains('open')) {
-      targetSection.classList.remove('open');
-      targetSection.style.maxHeight = null;
-      targetSection.style.padding = '0';
-      targetSection.style.backgroundColor = '';
-      card.classList.remove('hide-button', 'expanded');
-    } else {
-      targetSection.classList.add('open');
-      targetSection.style.backgroundColor = backgroundColor;
-      if (isMobile() && !window._suppressAutoScroll) {
-        setTimeout(() => {
-          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 80);
-      }
-      window._suppressAutoScroll = false;
-
-      // Reset other cards
-      document.querySelectorAll('.card').forEach((c) => {
-        c.classList.remove('hide-button', 'expanded');
-        c.style.boxShadow = 'none';
-      });
-
-      // Highlight clicked card
-      card.classList.add('hide-button', 'expanded');
-
-      // Dim other cards
-      document.querySelectorAll('.card').forEach((c) => {
-        if (c !== card) {
-          c.style.boxShadow = '0px 8px 8px rgba(0, 0, 0, 0.4)';
-        }
-      });
-    }
-  });
-});
-
-      window._suppressAutoScroll = true;
-
-      // Simulate click on the first Read More button after all listeners
-      const firstReadMore = document.querySelector('.card button');
-      if (firstReadMore) firstReadMore.click();
-    });
-  </script>
-
-
-
-<script>
-// Burger menu toggle for mobile only
-function handleBurgerMenuDisplay() {
-  const burger = document.querySelector('.burger-menu');
-  const nav = document.querySelector('nav');
-  const mobileNav = document.querySelector('.mobile-nav');
-  if (window.innerWidth <= 900) {
-    burger.style.display = 'flex';
-    nav.style.display = 'none';
-  } else {
-    burger.style.display = 'none';
-    nav.style.display = '';
-    if (mobileNav) mobileNav.style.display = 'none';
-  }
-}
-window.addEventListener('resize', handleBurgerMenuDisplay);
-document.addEventListener('DOMContentLoaded', function() {
-  handleBurgerMenuDisplay();
-  const burger = document.querySelector('.burger-menu');
-  const mobileNav = document.querySelector('.mobile-nav');
-  const mobileNavClose = document.querySelector('.mobile-nav-close');
-    if (burger && mobileNav) {
-    burger.setAttribute('aria-controls', 'mobile-nav');
-    burger.setAttribute('aria-expanded', 'false');
-    burger.addEventListener('click', function() {
-      const willOpen = mobileNav.style.display !== 'flex';
-      mobileNav.style.display = willOpen ? 'flex' : 'none';
-      burger.setAttribute('aria-expanded', String(willOpen));
-      document.body.classList.toggle('menu-open', willOpen);
-    });
-  }
-  if (mobileNav && mobileNavClose) {
-    mobileNavClose.addEventListener('click', function() {
-      mobileNav.style.display = 'none';
-      document.body.classList.remove('menu-open');
-      burger && burger.setAttribute('aria-expanded', 'false');
-    });
-  }
-    // Close menu on Escape
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && mobileNav && mobileNav.style.display === 'flex') {
-      mobileNav.style.display = 'none';
-      document.body.classList.remove('menu-open');
-      burger && burger.setAttribute('aria-expanded', 'false');
-    }
-  });
-  if (mobileNav) {
-    mobileNav.querySelectorAll('a').forEach(function(link) {
-      link.addEventListener('click', function() {
-        mobileNav.style.display = 'none';
-        document.body.classList.remove('menu-open');
-        burger && burger.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }  // Language switch redirects
-  const enBtn = document.getElementById('en');
-  const frBtn = document.getElementById('fr');
-  if (enBtn) enBtn.addEventListener('click', function() { window.location.replace('/en/index.html'); });
-  if (frBtn) frBtn.addEventListener('click', function() { window.location.replace('/fr/index.html'); });
-  // Language toggle: Only show EN on mobile
-  function handleLanguageToggle() {
-    const enBtn = document.getElementById('en');
-    const frBtn = document.getElementById('fr');
-    if (window.innerWidth <= 900) {
-      // On EN page: show FR, hide EN, mark FR active
-      if (frBtn) {
-        frBtn.style.display = '';
-        frBtn.classList.add('active');
-      }
-      if (enBtn) {
-        enBtn.style.display = 'none';
-        enBtn.classList.remove('active');
-      }
-    } else {
-      // Desktop: show both
-      if (frBtn) frBtn.style.display = '';
-      if (enBtn) enBtn.style.display = '';
-    }
-  }
-  handleLanguageToggle();
-  window.addEventListener('resize', handleLanguageToggle);
-    // Restore expandable sections under their container on desktop
-  function restoreSectionsOnDesktop() {
-    if (window.innerWidth > 900) {
-      const container = document.querySelector('.expandable-content');
-      if (!container) return;
-      // Preserve intended order based on the cards sequence
-      document.querySelectorAll('.card').forEach(card => {
-        const targetId = card.getAttribute('data-target');
-        const section = targetId && document.getElementById(targetId);
-        if (section && section.parentElement !== container) {
-          container.appendChild(section);
-        }
-      });
-    }
-  }
-  window.addEventListener('resize', restoreSectionsOnDesktop);
-  restoreSectionsOnDesktop();
-  
-});
-</script>
+<script type="module" src="../scripts/main.js"></script>
 </body>
 </html>
