@@ -77,7 +77,11 @@ export function initVisitPopup() {
       trapHandler = null;
     }
     if (lastTrigger) {
-      lastTrigger.focus();
+      // A trigger inside the (now hidden) mobile nav can't take focus;
+      // fall back to the visible burger button.
+      const inHiddenNav = mobileNav && mobileNav.contains(lastTrigger);
+      const target = inHiddenNav ? document.querySelector('.burger-menu') : lastTrigger;
+      target?.focus();
       lastTrigger = null;
     }
   };
