@@ -1,7 +1,7 @@
 import { getBasePath } from './path.js';
 
 const base = getBasePath();
-const lang = (navigator.language || navigator.userLanguage || 'en' || 'fr').toLowerCase();
+const lang = (navigator.language || 'en').toLowerCase();
 
 if (lang.startsWith('fr')) {
   window.location.replace(`${base}/fr/index.html`);
