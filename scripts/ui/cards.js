@@ -32,6 +32,7 @@ export function initCards() {
       const card = btn.closest('.card');
       const targetId = card.getAttribute('data-target');
       const targetSection = document.getElementById(targetId);
+      if (!targetSection) return;
 
       if (isMobile() && targetSection) {
         card.insertAdjacentElement('afterend', targetSection);

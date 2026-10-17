@@ -97,7 +97,7 @@ function initBurgerMenu() {
     link.addEventListener('click', () => {
       // Skip closing when the link triggers the visit popup (handled via data attribute)
       if (link.hasAttribute('data-visit-trigger')) return;
-      mobileNav.classList.remove('open');
+      mobileNav.style.display = 'none';
       document.body.classList.remove('menu-open');
       burger.setAttribute('aria-expanded', 'false');
     });

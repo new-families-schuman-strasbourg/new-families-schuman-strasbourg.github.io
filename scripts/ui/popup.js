@@ -7,7 +7,6 @@ export function initVisitPopup() {
 
   let lastTrigger = null;
   let trapHandler = null;
-  let escHandler = null;
 
   // Find all triggers using a data attribute
   const visitTriggers = document.querySelectorAll('[data-visit-trigger]');
@@ -25,11 +24,11 @@ export function initVisitPopup() {
     e.preventDefault();
     lastTrigger = e.currentTarget;
 
-    // Close mobile nav if it is open.
-    // The navigation component now toggles an "open" class instead of inline styles.
-    if (mobileNav && mobileNav.classList.contains('open')) {
-      mobileNav.classList.remove('open');
+    // Close mobile nav if it is open (nav.js toggles it via inline display).
+    if (mobileNav && mobileNav.style.display === 'flex') {
+      mobileNav.style.display = 'none';
       document.body.classList.remove('menu-open');
+      document.querySelector('.burger-menu')?.setAttribute('aria-expanded', 'false');
     }
 
     visitPopup.classList.add('active');
@@ -77,10 +76,6 @@ export function initVisitPopup() {
       visitPopup.removeEventListener('keydown', trapHandler);
       trapHandler = null;
     }
-    if (escHandler) {
-      document.removeEventListener('keydown', escHandler);
-      escHandler = null;
-    }
     if (lastTrigger) {
       lastTrigger.focus();
       lastTrigger = null;
@@ -106,7 +101,7 @@ export function initVisitPopup() {
   });
 
   // Escape key – global listener because the dialog is a modal
-  escHandler = (e) => {
+  const escHandler = (e) => {
     if (e.key === 'Escape' && visitPopup.classList.contains('active')) {
       closePopup();
     }
